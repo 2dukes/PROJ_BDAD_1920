@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS Jogador;
 DROP TABLE IF EXISTS Clube;
 DROP TABLE IF EXISTS Pessoa;
 
---CREATE TABLE Pessoa (
+CREATE TABLE Pessoa (
     idPessoa INTEGER NOT NULL,
     nome TEXT NOT NULL,
     morada TEXT NOT NULL,
@@ -56,7 +56,7 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT Pessoa_PK PRIMARY KEY(idPessoa)
 );
 
---CREATE TABLE Clube (
+CREATE TABLE Clube (
     idClube INTEGER NOT NULL,
     nome TEXT NOT NULL,
     anoFundacao INTEGER NOT NULL,
@@ -66,7 +66,7 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT Clube_FK FOREIGN KEY (idClube) REFERENCES ClassificacaoDoClubeNaEpoca
 );
 
---CREATE TABLE Jogador (
+CREATE TABLE Jogador (
     idPessoa INTEGER NOT NULL,
     idClube REFERENCES Clube,
     
@@ -75,14 +75,14 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT Jogador_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube
 );
 
---CREATE TABLE Liga (
+CREATE TABLE Liga (
     nome TEXT NOT NULL,
     pais TEXT NOT NULL,
     
     CONSTRAINT LIGA_PK PRIMARY KEY (nome, pais)
 );
 
---CREATE TABLE Epoca (
+CREATE TABLE Epoca (
     anoInicio INTEGER NOT NULL,
     anoFim INTEGER NOT NULL,
     nomeLiga TEXT NOT NULL,
@@ -92,7 +92,7 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT Epoca_FK1 FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nomeLiga, paisLiga),
 );
 
---CREATE TABLE ClassificacaoDoClubeNaEpoca (
+CREATE TABLE ClassificacaoDoClubeNaEpoca (
     idClassificacao INTEGER NOT NULL,
     golosMarcados INTEGER DEFAULT 0 CHECK (golosMarcados >= 0),
     golosSofridos INTEGER DEFAULT 0 CHECK (golosSofridos >= 0),
@@ -107,12 +107,12 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT ClassificacaoDoClubeNaEpoca_FK FOREIGN KEY (epoca) REFERENCES epoca 
 );
 
---CREATE TABLE Patrocinador (
+CREATE TABLE Patrocinador (
     idPatrocinador INTEGER NOT NULL,
     nome TEXT NOT NULL
 );
 
---CREATE TABLE PatrocinadorEpoca (
+CREATE TABLE PatrocinadorEpoca (
     idPatrocinador INTEGER NOT NULL,
     epoca INTEGER NOT NULL,
 
@@ -121,7 +121,7 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT PatrocinadorEpoca_FK2 FOREIGN KEY (epoca) REFERENCES Epoca(epoca)
 );
 
---CREATE TABLE PatrocinadorClube (
+CREATE TABLE PatrocinadorClube (
     idPatrocinador INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
 
@@ -130,7 +130,7 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT PatrocinadorClube_FK2 FOREIGN KEY (idClube) REFERENCES Clube(idClube)
 );
 
---CREATE TABLE Jornada (
+CREATE TABLE Jornada (
     idJornada INTEGER NOT NULL,
     epoca INTEGER NOT NULL,
     
@@ -138,7 +138,7 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT Jornada_FK FOREIGN KEY (epoca) REFERENCES Epoca(epoca)
 );
 
---CREATE TABLE Jogo (
+CREATE TABLE Jogo (
     idJogo INTEGER NOT NULL,
     data_e_hora DATE NOT NULL,
     classificacaoEquipaArbitragem INTEGER NOT NULL CHECK (classificacaoEquipaArbitragem >= 0 AND classificacaoEquipaArbitragem <= 10),
@@ -154,7 +154,7 @@ DROP TABLE IF EXISTS Pessoa;
     CONSTRAINT Jogo_FK4 FOREIGN KEY (idClubeFora) REFERENCES Clube(idClubeFora)
 );
 
---CREATE TABLE Arbitro (
+CREATE TABLE Arbitro (
     idPessoa INTEGER NOT NULL,
     classificacao INTEGER DEFAULT 0 CHECK (classificacao >= 0),
     numPremiosGanhos INTEGER DEFAULT 0 CHECK (numPremiosGanhos >= 0),
@@ -253,7 +253,7 @@ CREATE TABLE Remate (
     CONSTRAINT EstatisticaClubeJogo_FK2 FOREIGN KEY (idClube) REFERENCES Clube(idClube)
 );
 
---CREATE TABLE Estadio (
+CREATE TABLE Estadio (
     morada TEXT NOT NULL,
     capacidade INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
@@ -295,7 +295,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
 );
 
 
---CREATE TABLE EquipaFuncionarios (
+CREATE TABLE EquipaFuncionarios (
     idEquipaFuncionarios INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
 
@@ -304,7 +304,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
 );
 
 
---CREATE TABLE Medico (
+CREATE TABLE Medico (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
 
@@ -313,7 +313,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT Medico_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
---CREATE TABLE Massagista (
+CREATE TABLE Massagista (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
 
@@ -322,7 +322,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT Massagista_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
---CREATE TABLE ResponsavelGuardaRoupa (
+CREATE TABLE ResponsavelGuardaRoupa (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
 
@@ -331,7 +331,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
---CREATE TABLE FuncionarioDeLimpeza (
+CREATE TABLE FuncionarioDeLimpeza (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
 
@@ -340,7 +340,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT FuncionariosDeLimpeza_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
---CREATE TABLE Olheiro (
+CREATE TABLE Olheiro (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
 
@@ -349,7 +349,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT Olheiro_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
---CREATE TABLE EquipaTecnica (
+CREATE TABLE EquipaTecnica (
     idEquipaTecnica INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
     
@@ -357,7 +357,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT EquipaTecnica_FK FOREIGN KEY (idClube) REFERENCES Clube
 );
 
---CREATE TABLE TreinadorGuardaRedes (
+CREATE TABLE TreinadorGuardaRedes (
     idPessoa INTEGER NOT NULL,
     idEquipaTecnica NOT NULL,
 
@@ -366,7 +366,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT TreinadorGuardaRedes_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
---CREATE TABLE TreinadorAdjunto (
+CREATE TABLE TreinadorAdjunto (
     idPessoa INTEGER NOT NULL,
     idEquipaTecnica NOT NULL,
     
@@ -375,7 +375,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT TreinadorAdjunto_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
---CREATE TABLE TreinadorPrincipal (
+CREATE TABLE TreinadorPrincipal (
     idPessoa INTEGER NOT NULL,
     idEquipaTecnica NOT NULL,
     
@@ -384,14 +384,14 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     CONSTRAINT TreinadorPrincipal_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
---CREATE TABLE Delegado (
+CREATE TABLE Delegado (
     idPessoa INTEGER NOT NULL,
 
     CONSTRAINT Delegado_PK PRIMARY KEY (idPessoa),
     CONSTRAINT Delegado_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
 );
 
---CREATE TABLE Embaixador (
+CREATE TABLE Embaixador (
     idPessoa INTEGER NOT NULL,
     nomeLiga TEXT NOT NULL,
     paisLiga TEXT NOT NULL,
