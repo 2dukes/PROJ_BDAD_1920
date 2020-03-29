@@ -4,12 +4,10 @@
 PRAGMA foreign_keys=ON;
 PRAGMA encoding="UTF-8";
 
-
 DROP TABLE IF EXISTS TreinadorGuardaRedes;
 DROP TABLE IF EXISTS TreinadorAdjunto;
 DROP TABLE IF EXISTS TreinadorPrincipal;
 DROP TABLE IF EXISTS EquipaTecnica;
-DROP TABLE IF EXISTS Delegado;
 
 DROP TABLE IF EXISTS Medico;
 DROP TABLE IF EXISTS Massagista;
@@ -40,12 +38,15 @@ DROP TABLE IF EXISTS PatrocinadorEpoca;
 DROP TABLE IF EXISTS PatrocinadorClube;
 DROP TABLE IF EXISTS Patrocinador;
 DROP TABLE IF EXISTS Embaixador;
+
+DROP TABLE IF EXISTS Jogador;
+DROP TABLE IF EXISTS Clube;
 DROP TABLE IF EXISTS ClassificacaoDoClubeNaEpoca;
 DROP TABLE IF EXISTS Epoca;
 DROP TABLE IF EXISTS Liga;
-DROP TABLE IF EXISTS Jogador;
-DROP TABLE IF EXISTS Clube;
+DROP TABLE IF EXISTS Delegado;
 DROP TABLE IF EXISTS Pessoa;
+
 
 CREATE TABLE Pessoa (
     idPessoa INTEGER NOT NULL,
@@ -55,6 +56,13 @@ CREATE TABLE Pessoa (
     idade INTEGER NOT NULL,
     telefone INTEGER UNIQUE NOT NULL,
     CONSTRAINT Pessoa_PK PRIMARY KEY(idPessoa)
+);
+
+CREATE TABLE Delegado (
+    idPessoa INTEGER NOT NULL,
+
+    CONSTRAINT Delegado_PK PRIMARY KEY (idPessoa),
+    CONSTRAINT Delegado_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa(idPessoa)
 );
 
 CREATE TABLE Clube (
@@ -385,13 +393,6 @@ CREATE TABLE TreinadorPrincipal (
     CONSTRAINT TreinadorPrincipal_PK PRIMARY KEY(idPessoa),
     CONSTRAINT TreinadorPrincipal_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
     CONSTRAINT TreinadorPrincipal_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica
-);
-
-CREATE TABLE Delegado (
-    idPessoa INTEGER NOT NULL,
-
-    CONSTRAINT Delegado_PK PRIMARY KEY (idPessoa),
-    CONSTRAINT Delegado_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
 );
 
 CREATE TABLE Embaixador (
