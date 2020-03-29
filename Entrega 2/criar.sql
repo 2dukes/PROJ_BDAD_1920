@@ -4,11 +4,12 @@
 PRAGMA foreign_keys=ON;
 PRAGMA encoding="UTF-8";
 
-DROP TABLE IF EXISTS Delegado;
+
 DROP TABLE IF EXISTS TreinadorGuardaRedes;
 DROP TABLE IF EXISTS TreinadorAdjunto;
 DROP TABLE IF EXISTS TreinadorPrincipal;
 DROP TABLE IF EXISTS EquipaTecnica;
+DROP TABLE IF EXISTS Delegado;
 
 DROP TABLE IF EXISTS Medico;
 DROP TABLE IF EXISTS Massagista;
@@ -89,7 +90,7 @@ CREATE TABLE Epoca (
     paisLiga TEXT NOT NULL,
 
     CONSTRAINT Epoca_PK PRIMARY KEY (anoInicio),
-    CONSTRAINT Epoca_FK1 FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nomeLiga, paisLiga),
+    CONSTRAINT Epoca_FK1 FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nome, pais)
 );
 
 CREATE TABLE ClassificacaoDoClubeNaEpoca (
@@ -104,21 +105,23 @@ CREATE TABLE ClassificacaoDoClubeNaEpoca (
     epoca NOT NULL,
 
     CONSTRAINT ClassificacaoDoClubeNaEpoca_PK PRIMARY KEY (idClassificacao),
-    CONSTRAINT ClassificacaoDoClubeNaEpoca_FK FOREIGN KEY (epoca) REFERENCES epoca 
+    CONSTRAINT ClassificacaoDoClubeNaEpoca_FK FOREIGN KEY (epoca) REFERENCES Epoca
 );
 
 CREATE TABLE Patrocinador (
     idPatrocinador INTEGER NOT NULL,
-    nome TEXT NOT NULL
+    nome TEXT NOT NULL,
+
+    CONSTRAINT Patrocinador PRIMARY KEY (idPatrocinador)
 );
 
 CREATE TABLE PatrocinadorEpoca (
     idPatrocinador INTEGER NOT NULL,
     epoca INTEGER NOT NULL,
-
-    CONSTRAINT PatrocinadorEpoca_PK PRIMARY KEY (idPatrocinador, epoca),
+    
     CONSTRAINT PatrocinadorEpoca_FK1 FOREIGN KEY (idPatrocinador) REFERENCES Patrocinador(idPatrocinador),
-    CONSTRAINT PatrocinadorEpoca_FK2 FOREIGN KEY (epoca) REFERENCES Epoca(epoca)
+    CONSTRAINT PatrocinadorEpoca_FK2 FOREIGN KEY (epoca) REFERENCES Epoca(anoInicio),
+    CONSTRAINT PatrocinadorEpoca_PK PRIMARY KEY (idPatrocinador, epoca)
 );
 
 CREATE TABLE PatrocinadorClube (
@@ -135,7 +138,7 @@ CREATE TABLE Jornada (
     epoca INTEGER NOT NULL,
     
     CONSTRAINT Jornada_PK PRIMARY KEY (idJornada),
-    CONSTRAINT Jornada_FK FOREIGN KEY (epoca) REFERENCES Epoca(epoca)
+    CONSTRAINT Jornada_FK FOREIGN KEY (epoca) REFERENCES Epoca(anoInicio)
 );
 
 CREATE TABLE Jogo (
@@ -149,9 +152,9 @@ CREATE TABLE Jogo (
 
     CONSTRAINT Jogo_PK PRIMARY KEY (idJogo),
     CONSTRAINT Jogo_FK1 FOREIGN KEY (idJornada) REFERENCES Jornada(idJornada),
-    CONSTRAINT Jogo_PK2 FOREIGN KEY (idDelegado) REFERENCES Delegado(idDelegado),
-    CONSTRAINT Jogo_FK3 FOREIGN KEY (idClubeCasa) REFERENCES Clube(idClubeCasa),
-    CONSTRAINT Jogo_FK4 FOREIGN KEY (idClubeFora) REFERENCES Clube(idClubeFora)
+    CONSTRAINT Jogo_PK2 FOREIGN KEY (idDelegado) REFERENCES Delegado(idPessoa),
+    CONSTRAINT Jogo_FK3 FOREIGN KEY (idClubeCasa) REFERENCES Clube(idClube),
+    CONSTRAINT Jogo_FK4 FOREIGN KEY (idClubeFora) REFERENCES Clube(idClube)
 );
 
 CREATE TABLE Arbitro (
@@ -228,13 +231,13 @@ CREATE TABLE Assistencia (
 CREATE TABLE Remate (
     idEvento INTEGER NOT NULL,
     idJogador INTEGER NOT NULL,
-    naBaliza CHAR(1) NOT NULL CHECK (naBaliza = '0' OR naBaliza = '1'),
+    naBaliza CHAR(1) NOT NULL CHECK (naBaliza LIKE '0' OR naBaliza LIKE '1'),
     
     CONSTRAINT Remate_PK PRIMARY KEY(idEvento)
     CONSTRAINT Remate_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
 );
 
--- CREATE TABLE EstatisticaClubeJogo (
+CREATE TABLE EstatisticaClubeJogo (
     idEstatisticaClube INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
     idJogo INTEGER NOT NULL,
@@ -244,7 +247,7 @@ CREATE TABLE Remate (
     numFaltas INTEGER DEFAULT 0 CHECK (numFaltas >= 0),
     numRemates INTEGER DEFAULT 0 CHECK (numRemates >= 0),
     numRematesBaliza INTEGER DEFAULT 0 CHECK (numRematesBaliza >= 0 AND numRematesBaliza <= numRemates),
-    numCantos INTEGER DEFAULT 0 CHECK (numCantos > 0),
+    numCantos INTEGER DEFAULT 0 CHECK (numCantos >= 0),
     numForasDeJogo INTEGER DEFAULT 0 CHECK (numForasDeJogo >= 0),
     numAssistencias INTEGER DEFAULT 0 CHECK (numAssistencias >= 0 AND numAssistencias <= numGolos),
 
@@ -363,7 +366,7 @@ CREATE TABLE TreinadorGuardaRedes (
 
     CONSTRAINT TreinadorGuardaRedes_PK PRIMARY KEY(idPessoa),
     CONSTRAINT TreinadorGuardaRedes_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT TreinadorGuardaRedes_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
+    CONSTRAINT TreinadorGuardaRedes_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica
 );
 
 CREATE TABLE TreinadorAdjunto (
@@ -372,7 +375,7 @@ CREATE TABLE TreinadorAdjunto (
     
     CONSTRAINT TreinadorAdjunto_PK PRIMARY KEY(idPessoa),
     CONSTRAINT TreinadorAdjunto_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT TreinadorAdjunto_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
+    CONSTRAINT TreinadorAdjunto_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica
 );
 
 CREATE TABLE TreinadorPrincipal (
@@ -381,7 +384,7 @@ CREATE TABLE TreinadorPrincipal (
     
     CONSTRAINT TreinadorPrincipal_PK PRIMARY KEY(idPessoa),
     CONSTRAINT TreinadorPrincipal_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT TreinadorPrincipal_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
+    CONSTRAINT TreinadorPrincipal_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica
 );
 
 CREATE TABLE Delegado (

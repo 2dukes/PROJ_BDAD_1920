@@ -70,15 +70,14 @@ INSERT INTO Pessoa VALUES ('51', 'Filipe Ferreira', 'Onde o jogador vive', 'Bras
 INSERT INTO Pessoa VALUES ('52', 'João Reis', 'Onde o jogador vive', 'Portugal', '24', '960000052');
 INSERT INTO Pessoa VALUES ('53', 'Luís Pité', 'Onde o jogador vive', 'Brasil', '24', '960000053');
 INSERT INTO Pessoa VALUES ('54', 'Yohan Tavares', 'Onde o jogador vive', 'Brasil', '24', '9600000054');
-INSERT INTO Pessoa VALUES ('54', 'Philipe Sampaio', 'Onde o jogador vive', 'Portugal', '24', '960000055');
-INSERT INTO Pessoa VALUES ('55', 'Marko Petkovic', 'Onde o jogador vive', 'Brasil', '24', '9600000056');
-INSERT INTO Pessoa VALUES ('56', 'Ricardo Alves', 'Onde o jogador vive', 'Portugal', '24', '960000057');
-INSERT INTO Pessoa VALUES ('57', 'Jota Gonçak', 'Onde o jogador vive', 'Brasil', '24', '960000058');
-INSERT INTO Pessoa VALUES ('58', 'Pais Breno', 'Onde o jogador vive', 'Brasil', '24', '9600000059');
-INSERT INTO Pessoa VALUES ('59', 'Hueglo Neris', 'Onde o jogador vive', 'Portugal', '24', '960000060');
-INSERT INTO Pessoa VALUES ('60', 'Ricardo Costa', 'Onde o jogador vive', 'Brasil', '24', '9600000061');
-INSERT INTO Pessoa VALUES ('61', 'Leismann Fabiano', 'Onde o jogador vive', 'Portugal', '24', '960000062');
-INSERT INTO Pessoa VALUES ('62', 'Lucas Tagliapietra', 'Onde o jogador vive', 'Brasil', '24', '960000063');
+INSERT INTO Pessoa VALUES ('55', 'Philipe Sampaio', 'Onde o jogador vive', 'Portugal', '24', '960000055');
+INSERT INTO Pessoa VALUES ('56', 'Marko Petkovic', 'Onde o jogador vive', 'Brasil', '24', '9600000056');
+INSERT INTO Pessoa VALUES ('57', 'Ricardo Alves', 'Onde o jogador vive', 'Portugal', '24', '960000057');
+INSERT INTO Pessoa VALUES ('58', 'Jota Gonçak', 'Onde o jogador vive', 'Brasil', '24', '960000058');
+INSERT INTO Pessoa VALUES ('59', 'Pais Breno', 'Onde o jogador vive', 'Brasil', '24', '9600000059');
+INSERT INTO Pessoa VALUES ('60', 'Hueglo Neris', 'Onde o jogador vive', 'Portugal', '24', '960000060');
+INSERT INTO Pessoa VALUES ('61', 'Ricardo Costa', 'Onde o jogador vive', 'Brasil', '24', '9600000061');
+INSERT INTO Pessoa VALUES ('62', 'Leismann Fabiano', 'Onde o jogador vive', 'Portugal', '24', '960000062');
 
 -- CS Marítimo
 
@@ -355,26 +354,57 @@ INSERT INTO Pessoa VALUES ('293', 'Fernando Medeiros', 'Onde o jogador vive', 'P
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+-- Liga
+
+INSERT INTO Liga Values ('Primeira Liga', 'Portugal');
+
+-- Epoca
+
+INSERT INTO Epoca VALUES (2019, 2002, 'Primeira Liga', 'Portugal');
+
+-- Classificação
+
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('0', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('1', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('2', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('3', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('4', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('5', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('6', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('7', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('8', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('9', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('10', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('11', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('12', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('13', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('14', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('15', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('16', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('17', '2019');
+
+
 -- Clubes
 
-INSERT INTO Club VALUES ('0', 'Belenenses SAD', '1919', '0');
-INSERT INTO Club VALUES ('1', 'Boavista FC', '1919', '1');
-INSERT INTO Club VALUES ('2', 'CD Santa Clara', '1919', '2');
-INSERT INTO Club VALUES ('3', 'CD Tondela', '1919', '3');
-INSERT INTO Club VALUES ('4', 'CS Maritimo', '1919', '4');
-INSERT INTO Club VALUES ('5', 'Desportivo das Aves', '1919', '5');
-INSERT INTO Club VALUES ('6', 'FC Famalicão', '1919', '6');
-INSERT INTO Club VALUES ('7', 'FC Porto', '1893', '7');
-INSERT INTO Club VALUES ('8', 'Gil Vicente FC', '1919', '6');
-INSERT INTO Club VALUES ('9', 'Moreirense FC', '1919', '9');
-INSERT INTO Club VALUES ('10', 'Paços de Ferreira', '1919', '10');
-INSERT INTO Club VALUES ('11', 'Portimonense SC', '1919', '11');
-INSERT INTO Club VALUES ('12', 'Rio Ave', '1919', '12');
-INSERT INTO Club VALUES ('13', 'SL Benfica', '1919', '13');
-INSERT INTO Club VALUES ('14', 'Sporting CP', '1919', '14');
-INSERT INTO Club VALUES ('15', 'Sporting de Braga', '1919', '15');
-INSERT INTO Club VALUES ('16', 'Vitória de Guimarães', '1919', '16');
-INSERT INTO Club VALUES ('17', 'Vitória de Setúbal', '1919', '17');
+INSERT INTO Clube VALUES ('0', 'Belenenses SAD', '1919', '0');
+INSERT INTO Clube VALUES ('1', 'Boavista FC', '1919', '1');
+INSERT INTO Clube VALUES ('2', 'CD Santa Clara', '1919', '2');
+INSERT INTO Clube VALUES ('3', 'CD Tondela', '1919', '3');
+INSERT INTO Clube VALUES ('4', 'CS Maritimo', '1919', '4');
+INSERT INTO Clube VALUES ('5', 'Desportivo das Aves', '1919', '5');
+INSERT INTO Clube VALUES ('6', 'FC Famalicão', '1919', '6');
+INSERT INTO Clube VALUES ('7', 'FC Porto', '1893', '7');
+INSERT INTO Clube VALUES ('8', 'Gil Vicente FC', '1919', '6');
+INSERT INTO Clube VALUES ('9', 'Moreirense FC', '1919', '9');
+INSERT INTO Clube VALUES ('10', 'Paços de Ferreira', '1919', '10');
+INSERT INTO Clube VALUES ('11', 'Portimonense SC', '1919', '11');
+INSERT INTO Clube VALUES ('12', 'Rio Ave', '1919', '12');
+INSERT INTO Clube VALUES ('13', 'SL Benfica', '1919', '13');
+INSERT INTO Clube VALUES ('14', 'Sporting CP', '1919', '14');
+INSERT INTO Clube VALUES ('15', 'Sporting de Braga', '1919', '15');
+INSERT INTO Clube VALUES ('16', 'Vitória de Guimarães', '1919', '16');
+INSERT INTO Clube VALUES ('17', 'Vitória de Setúbal', '1919', '17');
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -971,7 +1001,6 @@ INSERT INTO Jogador VALUES ('51', '3');
 INSERT INTO Jogador VALUES ('52', '3');
 INSERT INTO Jogador VALUES ('53', '3');
 INSERT INTO Jogador VALUES ('54', '3');
-INSERT INTO Jogador VALUES ('54', '3');
 INSERT INTO Jogador VALUES ('55', '3');
 INSERT INTO Jogador VALUES ('56', '3');
 INSERT INTO Jogador VALUES ('57', '3');
@@ -1256,41 +1285,39 @@ INSERT INTO Jogador VALUES ('293', '17');
 
 -- Patrocinadores
 
-INSERT INTO Patrocinador VALUES ('0', 'NIKE');
-INSERT INTO Patrocinador VALUES ('1', 'PUMA');
-INSERT INTO Patrocinador VALUES ('2', 'ADIDAS');
-INSERT INTO Patrocinador VALUES ('3', 'NEW BALANCE');
-INSERT INTO Patrocinador VALUES ('4', 'NOS');
-INSERT INTO Patrocinador VALUES ('5', 'SAGRES');
+INSERT INTO Patrocinador VALUES (0, 'NIKE');
+INSERT INTO Patrocinador VALUES (1, 'PUMA');
+INSERT INTO Patrocinador VALUES (2, 'ADIDAS');
+INSERT INTO Patrocinador VALUES (3, 'NEW BALANCE');
+INSERT INTO Patrocinador VALUES (4, 'NOS');
+INSERT INTO Patrocinador VALUES (5, 'SAGRES');
 
-INSERT INTO PatrocinadorEpoca VALUES ('4', '2019')
-INSERT INTO PatrocinadorEpoca VALUES ('5', '2019')
-
-
-INSERT INTO PatrocinadorClube VALUES ('0', '0')
-INSERT INTO PatrocinadorClube VALUES ('1', '1')
-INSERT INTO PatrocinadorClube VALUES ('2', '2')
-INSERT INTO PatrocinadorClube VALUES ('3', '3')
-INSERT INTO PatrocinadorClube VALUES ('1', '4')
-INSERT INTO PatrocinadorClube VALUES ('0', '5')
-INSERT INTO PatrocinadorClube VALUES ('2', '6')
-INSERT INTO PatrocinadorClube VALUES ('3', '7')
-INSERT INTO PatrocinadorClube VALUES ('0', '7')
-INSERT INTO PatrocinadorClube VALUES ('0', '8')
-INSERT INTO PatrocinadorClube VALUES ('1', '9')
-INSERT INTO PatrocinadorClube VALUES ('3', '10')
-INSERT INTO PatrocinadorClube VALUES ('3', '11')
-INSERT INTO PatrocinadorClube VALUES ('0', '12')
-INSERT INTO PatrocinadorClube VALUES ('1', '13')
-INSERT INTO PatrocinadorClube VALUES ('2', '14')
-INSERT INTO PatrocinadorClube VALUES ('3', '15')
-INSERT INTO PatrocinadorClube VALUES ('0', '16')
-INSERT INTO PatrocinadorClube VALUES ('2', '17')
+INSERT INTO PatrocinadorEpoca VALUES (4, '2019');
+INSERT INTO PatrocinadorEpoca VALUES (5, '2019');
 
 
--- Liga
+INSERT INTO PatrocinadorClube VALUES (0, 0);
+INSERT INTO PatrocinadorClube VALUES (1, 1);
+INSERT INTO PatrocinadorClube VALUES (2, 2);
+INSERT INTO PatrocinadorClube VALUES (3, 3);
+INSERT INTO PatrocinadorClube VALUES (0, 4);
+INSERT INTO PatrocinadorClube VALUES (1, 5);
+INSERT INTO PatrocinadorClube VALUES (2, 6);
+INSERT INTO PatrocinadorClube VALUES (3, 7);
+INSERT INTO PatrocinadorClube VALUES (0, 8);
+INSERT INTO PatrocinadorClube VALUES (1, 9);
+INSERT INTO PatrocinadorClube VALUES (2, 10);
+INSERT INTO PatrocinadorClube VALUES (3, 11);
+INSERT INTO PatrocinadorClube VALUES (0, 12);
+INSERT INTO PatrocinadorClube VALUES (1, 13);
+INSERT INTO PatrocinadorClube VALUES (2, 14);
+INSERT INTO PatrocinadorClube VALUES (3, 15);
+INSERT INTO PatrocinadorClube VALUES (0, 16);
+INSERT INTO PatrocinadorClube VALUES (1, 17);
 
-INSERT INTO Liga Values ('Primeira Liga', 'Portugal');
+
+
+
 
 -- Árbitro
 
@@ -1430,81 +1457,22 @@ INSERT INTO Delegado VALUES ('529');
 INSERT INTO Delegado VALUES ('530');
 INSERT INTO Delegado VALUES ('531');
 
--- Classificação
-
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('0', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('1', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('2', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('3', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('4', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('5', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('6', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('7', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('8', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('9', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('10', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('11', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('12', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('13', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('14', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('15', '2019');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('16', '2018');
-INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('17', '2018');
-
-
--- Epoca
-
-INSERT INTO Epoca VALUES ('2019', '2002', 'Primeira Liga', 'Portugal');
-
 
 -- Jornadas
 
 INSERT INTO Jornada VALUES ('1', '2019');
-/* INSERT INTO Jornada VALUES ('2', '2019');
-INSERT INTO Jornada VALUES ('3', '2019');
-INSERT INTO Jornada VALUES ('4', '2019');
-INSERT INTO Jornada VALUES ('5', '2019');
-INSERT INTO Jornada VALUES ('6', '2019');
-INSERT INTO Jornada VALUES ('7', '2019');
-INSERT INTO Jornada VALUES ('8', '2019');
-INSERT INTO Jornada VALUES ('9', '2019');
-INSERT INTO Jornada VALUES ('10', '2019');
-INSERT INTO Jornada VALUES ('11', '2019');
-INSERT INTO Jornada VALUES ('12', '2019');
-INSERT INTO Jornada VALUES ('13', '2019');
-INSERT INTO Jornada VALUES ('14', '2019');
-INSERT INTO Jornada VALUES ('15', '2019');
-INSERT INTO Jornada VALUES ('16', '2019');
-INSERT INTO Jornada VALUES ('17', '2019');
-INSERT INTO Jornada VALUES ('18', '2019');
-INSERT INTO Jornada VALUES ('19', '2019');
-INSERT INTO Jornada VALUES ('20', '2019');
-INSERT INTO Jornada VALUES ('21', '2019');
-INSERT INTO Jornada VALUES ('22', '2019');
-INSERT INTO Jornada VALUES ('23', '2019');
-INSERT INTO Jornada VALUES ('24', '2019');
-INSERT INTO Jornada VALUES ('25', '2019');
-INSERT INTO Jornada VALUES ('26', '2019');
-INSERT INTO Jornada VALUES ('27', '2019');
-INSERT INTO Jornada VALUES ('28', '2019');
-INSERT INTO Jornada VALUES ('29', '2019');
-INSERT INTO Jornada VALUES ('30', '2019');
-INSERT INTO Jornada VALUES ('31', '2019');
-INSERT INTO Jornada VALUES ('32', '2019');
-INSERT INTO Jornada VALUES ('33', '2019');
-INSERT INTO Jornada VALUES ('34', '2019'); */
 
 -- Jornada 1
 
-INSERT INTO Jogo VALUES ('0', strftime("%d/%m/%Y %H::%M", "2019-08-11 20:00"), '5', '1', '520', '11', '0');
+INSERT INTO Jogo VALUES ('0', strftime("%d/%m/%Y %H:%M", "2019-08-11 20:00"), '5', '1', '520', '11', '0');
 
 INSERT INTO EventoJogo VALUES ('0', '5', '0');
 INSERT INTO EventoJogo VALUES ('1', '10', '0');
 
-INSERT INTO Remate VALUES ('0', '0', '1');
-INSERT INTO Remate VALUES ('1', '0', '182');
+INSERT INTO Remate VALUES ('0', '1', '0');
+INSERT INTO Remate VALUES ('1', '182', '0');
 
-INSERT INTO Jogo VALUES ('1', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '6', '1', '521', '2', '6');
+INSERT INTO Jogo VALUES ('1', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '6', '1', '521', '2', '6');
 
 INSERT INTO EventoJogo VALUES ('50', '10', '1');
 INSERT INTO EventoJogo VALUES ('51', '10', '1');
@@ -1513,10 +1481,10 @@ INSERT INTO EventoJogo VALUES ('53', '20', '1');
 
 INSERT INTO Golo VALUES ('50', '97');
 INSERT INTO Golo VALUES ('51', '98');
-INSERT INTO Remate VALUES ('52', '1', '97');
-INSERT INTO Remate VALUES ('53', '1', '98');
+INSERT INTO Remate VALUES ('52', '97', '1');
+INSERT INTO Remate VALUES ('53', '98', '1');
 
-INSERT INTO Jogo VALUES ('2', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '7', '1', '522', '8', '7');
+INSERT INTO Jogo VALUES ('2', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '7', '1', '522', '8', '7');
 
 INSERT INTO EventoJogo VALUES ('100', '10', '2');
 INSERT INTO EventoJogo VALUES ('101', '10', '2');
@@ -1530,14 +1498,14 @@ INSERT INTO EventoJogo VALUES ('107', '80', '2');
 INSERT INTO Golo VALUES ('100', '134');
 INSERT INTO Golo VALUES ('102', '135');
 INSERT INTO Golo VALUES ('104', '111');
-INSERT INTO Remate VALUES ('101', '1', '134');
-INSERT INTO Remate VALUES ('103', '1', '135');
-INSERT INTO Remate VALUES ('105', '1', '111');
-INSERT INTO Canto VALUES ('106', '1', '97');
-INSERT INTO Falta VALUES ('107', '1', '98');
+INSERT INTO Remate VALUES ('101', '134', '1');
+INSERT INTO Remate VALUES ('103','135', '1');
+INSERT INTO Remate VALUES ('105', '111', '1');
+INSERT INTO Canto VALUES ('106', '97', '1');
+INSERT INTO Falta VALUES ('107', '98');
 
 
-INSERT INTO Jogo VALUES ('3', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '4', '1', '523', '13', '10');
+INSERT INTO Jogo VALUES ('3', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '4', '1', '523', '13', '10');
 
 INSERT INTO EventoJogo VALUES ('120', '10', '3');
 INSERT INTO EventoJogo VALUES ('121', '10', '3');
@@ -1553,13 +1521,13 @@ INSERT INTO Golo VALUES ('121', '229');
 INSERT INTO Golo VALUES ('122', '229');
 INSERT INTO Golo VALUES ('123', '229');
 INSERT INTO Golo VALUES ('124', '229');
-INSERT INTO Remate VALUES ('125', '1', '229');
-INSERT INTO Remate VALUES ('126', '1', '229');
-INSERT INTO Remate VALUES ('127', '1', '229');
-INSERT INTO Remate VALUES ('128', '1', '229');
-INSERT INTO Remate VALUES ('129', '1', '229');
+INSERT INTO Remate VALUES ('125', '229', '1');
+INSERT INTO Remate VALUES ('126', '229', '1');
+INSERT INTO Remate VALUES ('127', '229', '1');
+INSERT INTO Remate VALUES ('128', '229', '1');
+INSERT INTO Remate VALUES ('129', '229', '1');
 
-INSERT INTO Jogo VALUES ('4', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '6', '1', '524', '1', '5');
+INSERT INTO Jogo VALUES ('4', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '6', '1', '524', '1', '5');
 
 INSERT INTO EventoJogo VALUES ('140', '10', '4');
 INSERT INTO EventoJogo VALUES ('141', '10', '4');
@@ -1571,11 +1539,11 @@ INSERT INTO EventoJogo VALUES ('147', '20', '4');
 INSERT INTO Golo VALUES ('140', '16');
 INSERT INTO Golo VALUES ('141', '17');
 INSERT INTO Golo VALUES ('142', '79');
-INSERT INTO Remate VALUES ('145', '1', '16');
-INSERT INTO Remate VALUES ('146', '1', '17');
-INSERT INTO Remate VALUES ('147', '1', '79');
+INSERT INTO Remate VALUES ('145', '16', '1');
+INSERT INTO Remate VALUES ('146', '17', '1');
+INSERT INTO Remate VALUES ('147', '79', '1');
 
-INSERT INTO Jogo VALUES ('5', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '6', '1', '525', '4', '14');
+INSERT INTO Jogo VALUES ('5', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '6', '1', '525', '4', '14');
 
 INSERT INTO EventoJogo VALUES ('160', '10', '5');
 INSERT INTO EventoJogo VALUES ('161', '10', '5');
@@ -1585,11 +1553,11 @@ INSERT INTO EventoJogo VALUES ('165', '20', '5');
 
 INSERT INTO Golo VALUES ('160', '63');
 INSERT INTO Golo VALUES ('161', '230');
-INSERT INTO Remate VALUES ('163', '1', '63');
-INSERT INTO Remate VALUES ('164', '1', '230');
-INSERT INTO Remate VALUES ('165', '1', '79');
+INSERT INTO Remate VALUES ('163', '63', '1');
+INSERT INTO Remate VALUES ('164', '230', '1');
+INSERT INTO Remate VALUES ('165', '79', '1');
 
-INSERT INTO Jogo VALUES ('6', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '7', '1', '526', '15', '9');
+INSERT INTO Jogo VALUES ('6', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '7', '1', '526', '15', '9');
 
 INSERT INTO EventoJogo VALUES ('180', '10', '6');
 INSERT INTO EventoJogo VALUES ('181', '20', '6');
@@ -1604,18 +1572,18 @@ INSERT INTO Golo VALUES ('180', '261');
 INSERT INTO Golo VALUES ('181', '261');
 INSERT INTO Golo VALUES ('182', '261');
 INSERT INTO Golo VALUES ('183', '165');
-INSERT INTO Remate VALUES ('184', '1', '261');
-INSERT INTO Remate VALUES ('185', '1', '261');
-INSERT INTO Remate VALUES ('186', '1', '261');
-INSERT INTO Remate VALUES ('187', '1', '165');
+INSERT INTO Remate VALUES ('184', '261', '1');
+INSERT INTO Remate VALUES ('185', '261', '1');
+INSERT INTO Remate VALUES ('186', '261', '1');
+INSERT INTO Remate VALUES ('187', '165', '1');
 
-INSERT INTO Jogo VALUES ('7', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '4', '1', '527', '17', '3');
+INSERT INTO Jogo VALUES ('7', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '4', '1', '527', '17', '3');
 
 INSERT INTO EventoJogo VALUES ('200', '90', '7');
 
 INSERT INTO Canto VALUES ('200', '62', '3');
 
-INSERT INTO Jogo VALUES ('8', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '6', '1', '528', '12', '16');
+INSERT INTO Jogo VALUES ('8', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '6', '1', '528', '12', '16');
 
 INSERT INTO EventoJogo VALUES ('220', '10', '8');
 INSERT INTO EventoJogo VALUES ('221', '20', '8');
@@ -1624,22 +1592,8 @@ INSERT INTO EventoJogo VALUES ('223', '20', '8');
 
 INSERT INTO Golo VALUES ('220', '213');
 INSERT INTO Golo VALUES ('221', '277');
-INSERT INTO Remate VALUES ('222', '1', '213');
-INSERT INTO Remate VALUES ('223', '1', '277');
-
-/*
--- Jornada 2
-
-INSERT INTO Jogo VALUES ('9', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '7', '2', '522', '6', '12');
-INSERT INTO Jogo VALUES ('10', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '523', '9', '8');
-INSERT INTO Jogo VALUES ('11', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '524', '0', '13');
-INSERT INTO Jogo VALUES ('12', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '525', '7', '17');
-INSERT INTO Jogo VALUES ('13', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '7', '2', '526', '10', '2');
-INSERT INTO Jogo VALUES ('14', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '527', '5', '4');
-INSERT INTO Jogo VALUES ('15', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '528', '16', '1');
-INSERT INTO Jogo VALUES ('14', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '529', '14', '15');
-INSERT INTO Jogo VALUES ('15', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '530', '3', '11');
-*/
+INSERT INTO Remate VALUES ('222', '213', '1');
+INSERT INTO Remate VALUES ('223', '277', '1');
 
 -- Estádios
 
@@ -2231,3 +2185,52 @@ INSERT INTO Club VALUES ('17', 'Vitória de Setúbal', '1919', '17'); 278 - 293
 
 
 */
+
+/* INSERT INTO Jornada VALUES ('2', '2019');
+INSERT INTO Jornada VALUES ('3', '2019');
+INSERT INTO Jornada VALUES ('4', '2019');
+INSERT INTO Jornada VALUES ('5', '2019');
+INSERT INTO Jornada VALUES ('6', '2019');
+INSERT INTO Jornada VALUES ('7', '2019');
+INSERT INTO Jornada VALUES ('8', '2019');
+INSERT INTO Jornada VALUES ('9', '2019');
+INSERT INTO Jornada VALUES ('10', '2019');
+INSERT INTO Jornada VALUES ('11', '2019');
+INSERT INTO Jornada VALUES ('12', '2019');
+INSERT INTO Jornada VALUES ('13', '2019');
+INSERT INTO Jornada VALUES ('14', '2019');
+INSERT INTO Jornada VALUES ('15', '2019');
+INSERT INTO Jornada VALUES ('16', '2019');
+INSERT INTO Jornada VALUES ('17', '2019');
+INSERT INTO Jornada VALUES ('18', '2019');
+INSERT INTO Jornada VALUES ('19', '2019');
+INSERT INTO Jornada VALUES ('20', '2019');
+INSERT INTO Jornada VALUES ('21', '2019');
+INSERT INTO Jornada VALUES ('22', '2019');
+INSERT INTO Jornada VALUES ('23', '2019');
+INSERT INTO Jornada VALUES ('24', '2019');
+INSERT INTO Jornada VALUES ('25', '2019');
+INSERT INTO Jornada VALUES ('26', '2019');
+INSERT INTO Jornada VALUES ('27', '2019');
+INSERT INTO Jornada VALUES ('28', '2019');
+INSERT INTO Jornada VALUES ('29', '2019');
+INSERT INTO Jornada VALUES ('30', '2019');
+INSERT INTO Jornada VALUES ('31', '2019');
+INSERT INTO Jornada VALUES ('32', '2019');
+INSERT INTO Jornada VALUES ('33', '2019');
+INSERT INTO Jornada VALUES ('34', '2019'); */
+
+/*
+-- Jornada 2
+
+INSERT INTO Jogo VALUES ('9', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '7', '2', '522', '6', '12');
+INSERT INTO Jogo VALUES ('10', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '523', '9', '8');
+INSERT INTO Jogo VALUES ('11', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '524', '0', '13');
+INSERT INTO Jogo VALUES ('12', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '525', '7', '17');
+INSERT INTO Jogo VALUES ('13', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '7', '2', '526', '10', '2');
+INSERT INTO Jogo VALUES ('14', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '527', '5', '4');
+INSERT INTO Jogo VALUES ('15', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '528', '16', '1');
+INSERT INTO Jogo VALUES ('14', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '529', '14', '15');
+INSERT INTO Jogo VALUES ('15', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '530', '3', '11');
+*/
+
