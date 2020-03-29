@@ -67,7 +67,7 @@ CREATE TABLE ClassificacaoDoClubeNaEpoca (
     CONSTRAINT ClassificacaoDoClubeNaEpoca_PK PRIMARY KEY (idClassificacao)
 );
 
-CREATE TABLE Clube (
+--CREATE TABLE Clube (
     idClube INTEGER NOT NULL,
     nome TEXT NOT NULL,
     anoFundacao INTEGER NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE Clube (
     CONSTRAINT Clube_FK FOREIGN KEY (idClube) REFERENCES ClassificacaoDoClubeNaEpoca
 );
 
-CREATE TABLE Jogador (
+--CREATE TABLE Jogador (
     idPessoa INTEGER NOT NULL,
     idClube REFERENCES Clube,
     
@@ -293,7 +293,7 @@ CREATE TABLE EstatisticaJogadorNumJogo (
 );
 
 
-CREATE TABLE EquipaFuncionarios (
+--CREATE TABLE EquipaFuncionarios (
     idEquipaFuncionarios INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
 
@@ -302,43 +302,52 @@ CREATE TABLE EquipaFuncionarios (
 );
 
 
-
-CREATE TABLE Medico (
+--CREATE TABLE Medico (
     idPessoa INTEGER NOT NULL,
+    idEquipaFuncionarios NOT NULL,
 
     CONSTRAINT Medico_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Medico_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
+    CONSTRAINT Medico_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
+    CONSTRAINT Medico_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
-CREATE TABLE Massagista (
+--CREATE TABLE Massagista (
     idPessoa INTEGER NOT NULL,
+    idEquipaFuncionarios NOT NULL,
 
-    CONSTRAINT Medico_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Medico_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
+    CONSTRAINT Massagista_PK PRIMARY KEY(idPessoa),
+    CONSTRAINT Massagista_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
+    CONSTRAINT Massagista_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
-CREATE TABLE ResponsavelGuardaRoupa (
+--CREATE TABLE ResponsavelGuardaRoupa (
     idPessoa INTEGER NOT NULL,
+    idEquipaFuncionarios NOT NULL,
 
-    CONSTRAINT Medico_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Medico_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
+    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios_PK PRIMARY KEY(idPessoa),
+    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
+    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
-CREATE TABLE FuncionarioDeLimpeza (
+--CREATE TABLE FuncionarioDeLimpeza (
     idPessoa INTEGER NOT NULL,
+    idEquipaFuncionarios NOT NULL,
 
-    CONSTRAINT Medico_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Medico_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
+    CONSTRAINT FuncionariosDeLimpeza_PK PRIMARY KEY(idPessoa),
+    CONSTRAINT FuncionariosDeLimpeza_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
+    CONSTRAINT FuncionariosDeLimpeza_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
-CREATE TABLE Olheiro (
+--CREATE TABLE Olheiro (
     idPessoa INTEGER NOT NULL,
+    idEquipaFuncionarios NOT NULL,
 
-    CONSTRAINT Medico_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Medico_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
+    CONSTRAINT Olheiro_PK PRIMARY KEY(idPessoa),
+    CONSTRAINT Olheiro_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
+    CONSTRAINT Olheiro_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
-CREATE TABLE EquipaTecnica (
+--CREATE TABLE EquipaTecnica (
     idEquipaTecnica INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
     
@@ -346,25 +355,31 @@ CREATE TABLE EquipaTecnica (
     CONSTRAINT EquipaTecnica_FK FOREIGN KEY (idClube) REFERENCES Clube
 );
 
-CREATE TABLE TreinadorGuardaRedes (
+--CREATE TABLE TreinadorGuardaRedes (
     idPessoa INTEGER NOT NULL,
+    idEquipaTecnica NOT NULL,
 
     CONSTRAINT TreinadorGuardaRedes_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT TreinadorGuardaRedes_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
+    CONSTRAINT TreinadorGuardaRedes_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
+    CONSTRAINT TreinadorGuardaRedes_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
-CREATE TABLE TreinadorAdjunto (
+--CREATE TABLE TreinadorAdjunto (
     idPessoa INTEGER NOT NULL,
+    idEquipaTecnica NOT NULL,
     
     CONSTRAINT TreinadorAdjunto_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT TreinadorAdjunto_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
+    CONSTRAINT TreinadorAdjunto_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
+    CONSTRAINT TreinadorAdjunto_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
-CREATE TABLE TreinadorPrincipal (
+--CREATE TABLE TreinadorPrincipal (
     idPessoa INTEGER NOT NULL,
+    idEquipaTecnica NOT NULL,
     
     CONSTRAINT TreinadorPrincipal_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT TreinadorPrincipal_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa
+    CONSTRAINT TreinadorPrincipal_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
+    CONSTRAINT TreinadorPrincipal_FK_EquipaTecnica FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
 );
 
 
