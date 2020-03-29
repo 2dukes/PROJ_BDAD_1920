@@ -1253,3 +1253,981 @@ INSERT INTO Jogador VALUES ('290', '17');
 INSERT INTO Jogador VALUES ('291', '17');
 INSERT INTO Jogador VALUES ('292', '17');
 INSERT INTO Jogador VALUES ('293', '17');
+
+-- Patrocinadores
+
+INSERT INTO Patrocinador VALUES ('0', 'NIKE');
+INSERT INTO Patrocinador VALUES ('1', 'PUMA');
+INSERT INTO Patrocinador VALUES ('2', 'ADIDAS');
+INSERT INTO Patrocinador VALUES ('3', 'NEW BALANCE');
+INSERT INTO Patrocinador VALUES ('4', 'NOS');
+INSERT INTO Patrocinador VALUES ('5', 'SAGRES');
+
+INSERT INTO PatrocinadorEpoca VALUES ('4', '2019')
+INSERT INTO PatrocinadorEpoca VALUES ('5', '2019')
+
+
+INSERT INTO PatrocinadorClube VALUES ('0', '0')
+INSERT INTO PatrocinadorClube VALUES ('1', '1')
+INSERT INTO PatrocinadorClube VALUES ('2', '2')
+INSERT INTO PatrocinadorClube VALUES ('3', '3')
+INSERT INTO PatrocinadorClube VALUES ('1', '4')
+INSERT INTO PatrocinadorClube VALUES ('0', '5')
+INSERT INTO PatrocinadorClube VALUES ('2', '6')
+INSERT INTO PatrocinadorClube VALUES ('3', '7')
+INSERT INTO PatrocinadorClube VALUES ('0', '7')
+INSERT INTO PatrocinadorClube VALUES ('0', '8')
+INSERT INTO PatrocinadorClube VALUES ('1', '9')
+INSERT INTO PatrocinadorClube VALUES ('3', '10')
+INSERT INTO PatrocinadorClube VALUES ('3', '11')
+INSERT INTO PatrocinadorClube VALUES ('0', '12')
+INSERT INTO PatrocinadorClube VALUES ('1', '13')
+INSERT INTO PatrocinadorClube VALUES ('2', '14')
+INSERT INTO PatrocinadorClube VALUES ('3', '15')
+INSERT INTO PatrocinadorClube VALUES ('0', '16')
+INSERT INTO PatrocinadorClube VALUES ('2', '17')
+
+
+-- Liga
+
+INSERT INTO Liga Values ('Primeira Liga', 'Portugal');
+
+-- Árbitro
+
+INSERT INTO Pessoa VALUES ('444', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000444');
+INSERT INTO Pessoa VALUES ('445', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000445');
+INSERT INTO Pessoa VALUES ('446', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000446');
+INSERT INTO Pessoa VALUES ('447', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000447');
+INSERT INTO Pessoa VALUES ('448', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000448');
+INSERT INTO Pessoa VALUES ('449', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000449');
+INSERT INTO Pessoa VALUES ('450', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000450');
+INSERT INTO Pessoa VALUES ('451', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000451');
+INSERT INTO Pessoa VALUES ('452', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000452');
+INSERT INTO Pessoa VALUES ('453', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000453');
+INSERT INTO Pessoa VALUES ('454', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000454');
+INSERT INTO Pessoa VALUES ('455', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000455');
+INSERT INTO Pessoa VALUES ('456', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000456');
+INSERT INTO Pessoa VALUES ('457', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000457');
+INSERT INTO Pessoa VALUES ('458', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000458');
+INSERT INTO Pessoa VALUES ('459', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000459');
+INSERT INTO Pessoa VALUES ('460', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000460');
+INSERT INTO Pessoa VALUES ('461', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000461');
+INSERT INTO Pessoa VALUES ('462', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000462');
+INSERT INTO Pessoa VALUES ('463', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '9600004463');
+INSERT INTO Pessoa VALUES ('464', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000464');
+INSERT INTO Pessoa VALUES ('465', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000465');
+INSERT INTO Pessoa VALUES ('466', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000466');
+INSERT INTO Pessoa VALUES ('467', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000467');
+INSERT INTO Pessoa VALUES ('468', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000468');
+INSERT INTO Pessoa VALUES ('469', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000469');
+INSERT INTO Pessoa VALUES ('470', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000470');
+INSERT INTO Pessoa VALUES ('471', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000471');
+INSERT INTO Pessoa VALUES ('472', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000472');
+INSERT INTO Pessoa VALUES ('473', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000473');
+INSERT INTO Pessoa VALUES ('474', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000474');
+INSERT INTO Pessoa VALUES ('475', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000475');
+INSERT INTO Pessoa VALUES ('476', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000476');
+INSERT INTO Pessoa VALUES ('477', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000477');
+INSERT INTO Pessoa VALUES ('478', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000478');
+INSERT INTO Pessoa VALUES ('479', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000479');
+INSERT INTO Pessoa VALUES ('480', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000480');
+INSERT INTO Pessoa VALUES ('481', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000481');
+INSERT INTO Pessoa VALUES ('482', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000482');
+INSERT INTO Pessoa VALUES ('483', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000483');
+INSERT INTO Pessoa VALUES ('484', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000484');
+INSERT INTO Pessoa VALUES ('485', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000485');
+INSERT INTO Pessoa VALUES ('486', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000486');
+INSERT INTO Pessoa VALUES ('487', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000487');
+INSERT INTO Pessoa VALUES ('488', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000488');
+INSERT INTO Pessoa VALUES ('489', 'Odisseias Vlachodimos', 'Onde o jogador vive', 'Portugal', '24', '9600000489');
+INSERT INTO Pessoa VALUES ('490', 'Mile Svilar', 'Onde o jogador vive', 'Burkina Faso', '23', '960000490');
+INSERT INTO Pessoa VALUES ('491', 'Ivan Zlobin', 'Onde o jogador vive', 'Portugal', '34', '960000491');
+INSERT INTO Pessoa VALUES ('492', 'Mateus Pasinato', 'Onde o jogador vive', 'Portugal', '24', '9600000492');
+INSERT INTO Pessoa VALUES ('493', 'Pedro Trigueira', 'Onde o jogador vive', 'Burkina Faso', '23', '960000493');
+
+
+INSERT INTO Arbitro(idPessoa) VALUES ('444');
+INSERT INTO Arbitro(idPessoa) VALUES ('445');
+INSERT INTO Arbitro(idPessoa) VALUES ('446');
+INSERT INTO Arbitro(idPessoa) VALUES ('447');
+INSERT INTO Arbitro(idPessoa) VALUES ('448');
+INSERT INTO Arbitro(idPessoa) VALUES ('449');
+INSERT INTO Arbitro(idPessoa) VALUES ('450');
+INSERT INTO Arbitro(idPessoa) VALUES ('451');
+INSERT INTO Arbitro(idPessoa) VALUES ('452');
+INSERT INTO Arbitro(idPessoa) VALUES ('453');
+INSERT INTO Arbitro(idPessoa) VALUES ('454');
+INSERT INTO Arbitro(idPessoa) VALUES ('455');
+INSERT INTO Arbitro(idPessoa) VALUES ('456');
+INSERT INTO Arbitro(idPessoa) VALUES ('457');
+INSERT INTO Arbitro(idPessoa) VALUES ('458');
+INSERT INTO Arbitro(idPessoa) VALUES ('459');
+INSERT INTO Arbitro(idPessoa) VALUES ('460');
+INSERT INTO Arbitro(idPessoa) VALUES ('461');
+INSERT INTO Arbitro(idPessoa) VALUES ('462');
+INSERT INTO Arbitro(idPessoa) VALUES ('463');
+INSERT INTO Arbitro(idPessoa) VALUES ('464');
+INSERT INTO Arbitro(idPessoa) VALUES ('465');
+INSERT INTO Arbitro(idPessoa) VALUES ('466');
+INSERT INTO Arbitro(idPessoa) VALUES ('467');
+INSERT INTO Arbitro(idPessoa) VALUES ('468');
+INSERT INTO Arbitro(idPessoa) VALUES ('469');
+INSERT INTO Arbitro(idPessoa) VALUES ('470');
+INSERT INTO Arbitro(idPessoa) VALUES ('471');
+INSERT INTO Arbitro(idPessoa) VALUES ('472');
+INSERT INTO Arbitro(idPessoa) VALUES ('473');
+INSERT INTO Arbitro(idPessoa) VALUES ('474');
+INSERT INTO Arbitro(idPessoa) VALUES ('475');
+INSERT INTO Arbitro(idPessoa) VALUES ('476');
+INSERT INTO Arbitro(idPessoa) VALUES ('477');
+INSERT INTO Arbitro(idPessoa) VALUES ('478');
+INSERT INTO Arbitro(idPessoa) VALUES ('479');
+INSERT INTO Arbitro(idPessoa) VALUES ('480');
+INSERT INTO Arbitro(idPessoa) VALUES ('481');
+INSERT INTO Arbitro(idPessoa) VALUES ('482');
+INSERT INTO Arbitro(idPessoa) VALUES ('483');
+INSERT INTO Arbitro(idPessoa) VALUES ('484');
+INSERT INTO Arbitro(idPessoa) VALUES ('485');
+INSERT INTO Arbitro(idPessoa) VALUES ('486');
+INSERT INTO Arbitro(idPessoa) VALUES ('487');
+INSERT INTO Arbitro(idPessoa) VALUES ('488');
+
+-- Embaixadores
+
+INSERT INTO Pessoa VALUES ('500', 'Nuno Gomes', 'UNKNOWN', 'Portugal', '44', '960000500');
+INSERT INTO Pessoa VALUES ('501', 'Paulo Futre', 'UNKNOWN', 'Portugal', '52', '960000501');
+INSERT INTO Pessoa VALUES ('502', 'André Villas-Boas', 'UNKNOWN', 'Portugal', '37', '960000502');
+
+INSERT INTO Embaixador VALUES ('500', 'Primeira Liga', 'Portugal');
+INSERT INTO Embaixador VALUES ('501', 'Primeira Liga', 'Portugal');
+INSERT INTO Embaixador VALUES ('502', 'Primeira Liga', 'Portugal');
+
+-- Delegados
+
+INSERT INTO Pessoa VALUES ('520', 'Tó', 'Rua do Tó', 'África do Sul', '90', '960000520');
+INSERT INTO Pessoa VALUES ('521', 'Tó', 'Rua do Tó', 'África do Norte', '90', '960000521');
+INSERT INTO Pessoa VALUES ('522', 'Tó', 'Rua do Tó', 'África do Centro', '90', '960000522');
+INSERT INTO Pessoa VALUES ('523', 'Tó', 'Rua do Tó', 'África do Sul', '90', '960000523');
+INSERT INTO Pessoa VALUES ('524', 'Tó', 'Rua do Tó', 'África do Norte', '90', '960000524');
+INSERT INTO Pessoa VALUES ('525', 'Tó', 'Rua do Tó', 'África do Centro', '90', '960000525');
+INSERT INTO Pessoa VALUES ('526', 'Tó', 'Rua do Tó', 'África do Sul', '90', '960000526');
+INSERT INTO Pessoa VALUES ('527', 'Tó', 'Rua do Tó', 'África do Norte', '90', '960000527');
+INSERT INTO Pessoa VALUES ('528', 'Tó', 'Rua do Tó', 'África do Centro', '90', '960000528');
+INSERT INTO Pessoa VALUES ('529', 'Tó', 'Rua do Tó', 'África do Sul', '90', '960000529');
+INSERT INTO Pessoa VALUES ('530', 'Tó', 'Rua do Tó', 'África do Norte', '90', '96000050');
+INSERT INTO Pessoa VALUES ('531', 'Tó', 'Rua do Tó', 'África do Centro', '90', '9600005231');
+
+INSERT INTO Delegado VALUES ('520');
+INSERT INTO Delegado VALUES ('521');
+INSERT INTO Delegado VALUES ('522');
+INSERT INTO Delegado VALUES ('523');
+INSERT INTO Delegado VALUES ('524');
+INSERT INTO Delegado VALUES ('525');
+INSERT INTO Delegado VALUES ('526');
+INSERT INTO Delegado VALUES ('527');
+INSERT INTO Delegado VALUES ('528');
+INSERT INTO Delegado VALUES ('529');
+INSERT INTO Delegado VALUES ('530');
+INSERT INTO Delegado VALUES ('531');
+
+-- Classificação
+
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('0', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('1', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('2', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('3', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('4', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('5', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('6', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('7', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('8', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('9', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('10', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('11', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('12', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('13', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('14', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('15', '2019');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('16', '2018');
+INSERT INTO ClassificacaoDoClubeNaEpoca(idClassificacao, epoca) VALUES ('17', '2018');
+
+
+-- Epoca
+
+INSERT INTO Epoca VALUES ('2019', '2002', 'Primeira Liga', 'Portugal');
+
+
+-- Jornadas
+
+INSERT INTO Jornada VALUES ('1', '2019');
+/* INSERT INTO Jornada VALUES ('2', '2019');
+INSERT INTO Jornada VALUES ('3', '2019');
+INSERT INTO Jornada VALUES ('4', '2019');
+INSERT INTO Jornada VALUES ('5', '2019');
+INSERT INTO Jornada VALUES ('6', '2019');
+INSERT INTO Jornada VALUES ('7', '2019');
+INSERT INTO Jornada VALUES ('8', '2019');
+INSERT INTO Jornada VALUES ('9', '2019');
+INSERT INTO Jornada VALUES ('10', '2019');
+INSERT INTO Jornada VALUES ('11', '2019');
+INSERT INTO Jornada VALUES ('12', '2019');
+INSERT INTO Jornada VALUES ('13', '2019');
+INSERT INTO Jornada VALUES ('14', '2019');
+INSERT INTO Jornada VALUES ('15', '2019');
+INSERT INTO Jornada VALUES ('16', '2019');
+INSERT INTO Jornada VALUES ('17', '2019');
+INSERT INTO Jornada VALUES ('18', '2019');
+INSERT INTO Jornada VALUES ('19', '2019');
+INSERT INTO Jornada VALUES ('20', '2019');
+INSERT INTO Jornada VALUES ('21', '2019');
+INSERT INTO Jornada VALUES ('22', '2019');
+INSERT INTO Jornada VALUES ('23', '2019');
+INSERT INTO Jornada VALUES ('24', '2019');
+INSERT INTO Jornada VALUES ('25', '2019');
+INSERT INTO Jornada VALUES ('26', '2019');
+INSERT INTO Jornada VALUES ('27', '2019');
+INSERT INTO Jornada VALUES ('28', '2019');
+INSERT INTO Jornada VALUES ('29', '2019');
+INSERT INTO Jornada VALUES ('30', '2019');
+INSERT INTO Jornada VALUES ('31', '2019');
+INSERT INTO Jornada VALUES ('32', '2019');
+INSERT INTO Jornada VALUES ('33', '2019');
+INSERT INTO Jornada VALUES ('34', '2019'); */
+
+-- Jornada 1
+
+INSERT INTO Jogo VALUES ('0', strftime("%d/%m/%Y %H::%M", "2019-08-11 20:00"), '5', '1', '520', '11', '0');
+
+INSERT INTO EventoJogo VALUES ('0', '5', '0');
+INSERT INTO EventoJogo VALUES ('1', '10', '0');
+
+INSERT INTO Remate VALUES ('0', '0', '1');
+INSERT INTO Remate VALUES ('1', '0', '182');
+
+INSERT INTO Jogo VALUES ('1', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '6', '1', '521', '2', '6');
+
+INSERT INTO EventoJogo VALUES ('50', '10', '1');
+INSERT INTO EventoJogo VALUES ('51', '10', '1');
+INSERT INTO EventoJogo VALUES ('52', '20', '1');
+INSERT INTO EventoJogo VALUES ('53', '20', '1');
+
+INSERT INTO Golo VALUES ('50', '97');
+INSERT INTO Golo VALUES ('51', '98');
+INSERT INTO Remate VALUES ('52', '1', '97');
+INSERT INTO Remate VALUES ('53', '1', '98');
+
+INSERT INTO Jogo VALUES ('2', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '7', '1', '522', '8', '7');
+
+INSERT INTO EventoJogo VALUES ('100', '10', '2');
+INSERT INTO EventoJogo VALUES ('101', '10', '2');
+INSERT INTO EventoJogo VALUES ('102', '20', '2');
+INSERT INTO EventoJogo VALUES ('103', '20', '2');
+INSERT INTO EventoJogo VALUES ('104', '30', '2');
+INSERT INTO EventoJogo VALUES ('105', '30', '2');
+INSERT INTO EventoJogo VALUES ('106', '70', '2');
+INSERT INTO EventoJogo VALUES ('107', '80', '2');
+
+INSERT INTO Golo VALUES ('100', '134');
+INSERT INTO Golo VALUES ('102', '135');
+INSERT INTO Golo VALUES ('104', '111');
+INSERT INTO Remate VALUES ('101', '1', '134');
+INSERT INTO Remate VALUES ('103', '1', '135');
+INSERT INTO Remate VALUES ('105', '1', '111');
+INSERT INTO Canto VALUES ('106', '1', '97');
+INSERT INTO Falta VALUES ('107', '1', '98');
+
+
+INSERT INTO Jogo VALUES ('3', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '4', '1', '523', '13', '10');
+
+INSERT INTO EventoJogo VALUES ('120', '10', '3');
+INSERT INTO EventoJogo VALUES ('121', '10', '3');
+INSERT INTO EventoJogo VALUES ('122', '20', '3');
+INSERT INTO EventoJogo VALUES ('123', '20', '3');
+INSERT INTO EventoJogo VALUES ('124', '10', '3');
+INSERT INTO EventoJogo VALUES ('125', '10', '3');
+INSERT INTO EventoJogo VALUES ('126', '20', '3');
+INSERT INTO EventoJogo VALUES ('127', '20', '3');
+
+INSERT INTO Golo VALUES ('120', '229');
+INSERT INTO Golo VALUES ('121', '229');
+INSERT INTO Golo VALUES ('122', '229');
+INSERT INTO Golo VALUES ('123', '229');
+INSERT INTO Golo VALUES ('124', '229');
+INSERT INTO Remate VALUES ('125', '1', '229');
+INSERT INTO Remate VALUES ('126', '1', '229');
+INSERT INTO Remate VALUES ('127', '1', '229');
+INSERT INTO Remate VALUES ('128', '1', '229');
+INSERT INTO Remate VALUES ('129', '1', '229');
+
+INSERT INTO Jogo VALUES ('4', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '6', '1', '524', '1', '5');
+
+INSERT INTO EventoJogo VALUES ('140', '10', '4');
+INSERT INTO EventoJogo VALUES ('141', '10', '4');
+INSERT INTO EventoJogo VALUES ('142', '20', '4');
+INSERT INTO EventoJogo VALUES ('145', '10', '4');
+INSERT INTO EventoJogo VALUES ('146', '20', '4');
+INSERT INTO EventoJogo VALUES ('147', '20', '4');
+
+INSERT INTO Golo VALUES ('140', '16');
+INSERT INTO Golo VALUES ('141', '17');
+INSERT INTO Golo VALUES ('142', '79');
+INSERT INTO Remate VALUES ('145', '1', '16');
+INSERT INTO Remate VALUES ('146', '1', '17');
+INSERT INTO Remate VALUES ('147', '1', '79');
+
+INSERT INTO Jogo VALUES ('5', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '6', '1', '525', '4', '14');
+
+INSERT INTO EventoJogo VALUES ('160', '10', '5');
+INSERT INTO EventoJogo VALUES ('161', '10', '5');
+INSERT INTO EventoJogo VALUES ('163', '10', '5');
+INSERT INTO EventoJogo VALUES ('164', '20', '5');
+INSERT INTO EventoJogo VALUES ('165', '20', '5');
+
+INSERT INTO Golo VALUES ('160', '63');
+INSERT INTO Golo VALUES ('161', '230');
+INSERT INTO Remate VALUES ('163', '1', '63');
+INSERT INTO Remate VALUES ('164', '1', '230');
+INSERT INTO Remate VALUES ('165', '1', '79');
+
+INSERT INTO Jogo VALUES ('6', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '7', '1', '526', '15', '9');
+
+INSERT INTO EventoJogo VALUES ('180', '10', '6');
+INSERT INTO EventoJogo VALUES ('181', '20', '6');
+INSERT INTO EventoJogo VALUES ('182', '30', '6');
+INSERT INTO EventoJogo VALUES ('183', '40', '6');
+INSERT INTO EventoJogo VALUES ('184', '10', '6');
+INSERT INTO EventoJogo VALUES ('185', '20', '6');
+INSERT INTO EventoJogo VALUES ('186', '30', '6');
+INSERT INTO EventoJogo VALUES ('187', '40', '6');
+
+INSERT INTO Golo VALUES ('180', '261');
+INSERT INTO Golo VALUES ('181', '261');
+INSERT INTO Golo VALUES ('182', '261');
+INSERT INTO Golo VALUES ('183', '165');
+INSERT INTO Remate VALUES ('184', '1', '261');
+INSERT INTO Remate VALUES ('185', '1', '261');
+INSERT INTO Remate VALUES ('186', '1', '261');
+INSERT INTO Remate VALUES ('187', '1', '165');
+
+INSERT INTO Jogo VALUES ('7', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '4', '1', '527', '17', '3');
+
+INSERT INTO EventoJogo VALUES ('200', '90', '7');
+
+INSERT INTO Canto VALUES ('200', '62', '3');
+
+INSERT INTO Jogo VALUES ('8', strftime("%d/%m/%Y %H::%M", "2018-08-12 20:00"), '6', '1', '528', '12', '16');
+
+INSERT INTO EventoJogo VALUES ('220', '10', '8');
+INSERT INTO EventoJogo VALUES ('221', '20', '8');
+INSERT INTO EventoJogo VALUES ('222', '10', '8');
+INSERT INTO EventoJogo VALUES ('223', '20', '8');
+
+INSERT INTO Golo VALUES ('220', '213');
+INSERT INTO Golo VALUES ('221', '277');
+INSERT INTO Remate VALUES ('222', '1', '213');
+INSERT INTO Remate VALUES ('223', '1', '277');
+
+/*
+-- Jornada 2
+
+INSERT INTO Jogo VALUES ('9', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '7', '2', '522', '6', '12');
+INSERT INTO Jogo VALUES ('10', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '523', '9', '8');
+INSERT INTO Jogo VALUES ('11', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '524', '0', '13');
+INSERT INTO Jogo VALUES ('12', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '525', '7', '17');
+INSERT INTO Jogo VALUES ('13', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '7', '2', '526', '10', '2');
+INSERT INTO Jogo VALUES ('14', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '527', '5', '4');
+INSERT INTO Jogo VALUES ('15', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '528', '16', '1');
+INSERT INTO Jogo VALUES ('14', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '4', '2', '529', '14', '15');
+INSERT INTO Jogo VALUES ('15', strftime("%d/%m/%Y %H::%M", "2018-08-18 20:00"), '6', '2', '530', '3', '11');
+*/
+
+-- Estádios
+
+INSERT INTO Estadio VALUES ("MORADA0", 38000, 0);
+INSERT INTO Estadio VALUES ("MORADA1", 40000, 1);
+INSERT INTO Estadio VALUES ("MORADA2", 15000, 2);
+INSERT INTO Estadio VALUES ("MORADA3", 25000, 3);
+INSERT INTO Estadio VALUES ("MORADA4", 24000, 4);
+INSERT INTO Estadio VALUES ("MORADA5", 12000, 5);
+INSERT INTO Estadio VALUES ("MORADA6", 10000, 6);
+INSERT INTO Estadio VALUES ("MORADA7", 56000, 7);
+INSERT INTO Estadio VALUES ("MORADA8", 8000, 8);
+INSERT INTO Estadio VALUES ("MORADA9", 10000, 9);
+INSERT INTO Estadio VALUES ("MORADA10", 10000, 10);
+INSERT INTO Estadio VALUES ("MORADA11", 17000, 11);
+INSERT INTO Estadio VALUES ("MORADA12", 30000, 12);
+INSERT INTO Estadio VALUES ("MORADA13", 60000, 13);
+INSERT INTO Estadio VALUES ("MORADA14", 56000, 14);
+INSERT INTO Estadio VALUES ("MORADA15", 44000, 15);
+INSERT INTO Estadio VALUES ("MORADA16", 44000, 16);
+INSERT INTO Estadio VALUES ("MORADA17", 20000, 16);
+
+-- Estatística Clube num Jogo
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (0, 11, 0);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (1, 0, 0);
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (2, 2, 1);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (3, 6, 1);
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (4, 8, 2);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (5, 7, 2);
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (6, 13, 3);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (7, 10, 3);
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (8, 1, 4);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (9, 5, 4);
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (10, 4, 5);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (11, 14, 5);
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (12, 15, 6);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (13, 9, 6);
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (14, 17, 7);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (15, 3, 7);
+
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (16, 12, 8);
+INSERT INTO EstatisticaClubeJogo(idEstatisticaClube, idClube, idJogo) VALUES (17, 16, 8);
+
+-- Estatística Jogador num Jogo
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(0, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(1, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(2, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(3, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(4, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(5, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(6, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(7, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(8, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(9, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(10, 0, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(182, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(183, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(184, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(185, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(186, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(187, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(188, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(189, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(190, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(191, 0, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(192, 0, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(16, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(17, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(18, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(19, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(20, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(21, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(22, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(23, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(24, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(25, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(26, 1, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(95, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(96, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(97, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(98, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(99, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(100, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(101, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(102, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(103, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(104, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(105, 1, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(134, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(135, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(136, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(137, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(138, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(139, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(140, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(141, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(142, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(143, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(144, 2, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(111, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(112, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(113, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(114, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(115, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(116, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(117, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(118, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(119, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(120, 2, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(121, 2, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(214, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(215, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(216, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(217, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(218, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(219, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(220, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(221, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(222, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(223, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(224, 3, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(166, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(167, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(168, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(169, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(170, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(171, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(172, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(173, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(174, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(175, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(176, 3, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(16, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(17, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(18, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(19, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(20, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(21, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(22, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(23, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(24, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(25, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(26, 4, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(79, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(80, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(81, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(82, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(83, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(84, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(85, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(86, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(87, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(88, 4, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(89, 4, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(63, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(64, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(65, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(66, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(67, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(68, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(69, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(70, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(71, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(72, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(73, 5, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(230, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(231, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(232, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(233, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(234, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(235, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(236, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(237, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(238, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(239, 5, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(240, 5, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(246, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(247, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(248, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(249, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(250, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(251, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(252, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(253, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(254, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(255, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(256, 6, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(150, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(151, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(152, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(153, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(154, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(155, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(156, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(157, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(158, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(159, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(160, 6, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(278, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(279, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(280, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(281, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(282, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(283, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(284, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(285, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(286, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(287, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(288, 7, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(48, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(49, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(50, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(51, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(52, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(53, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(54, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(55, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(56, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(57, 7, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(58, 7, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(198, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(199, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(200, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(201, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(202, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(203, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(204, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(205, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(206, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(207, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(208, 8, 90);
+
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(262, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(263, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(264, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(265, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(266, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(267, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(268, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(269, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(270, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(271, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(272, 8, 90);
+
+
+-- EstatisticaJogadorEpoca
+
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(0, 2019, 0);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(1, 2019, 1);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(2, 2019, 2);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(3, 2019, 3);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(4, 2019, 4);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(5, 2019, 5);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(6, 2019, 6);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(7, 2019, 7);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(8, 2019, 8);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(9, 2019, 9);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(10, 2019, 10);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(11, 2019, 11);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(12, 2019, 12);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(13, 2019, 13);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(14, 2019, 14);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(15, 2019, 15);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(16, 2019, 16);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(17, 2019, 17);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(18, 2019, 18);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(19, 2019, 19);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(20, 2019, 20);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(21, 2019, 21);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(22, 2019, 22);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(23, 2019, 23);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(24, 2019, 24);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(25, 2019, 25);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(26, 2019, 26);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(27, 2019, 27);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(28, 2019, 28);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(29, 2019, 29);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(30, 2019, 30);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(31, 2019, 31);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(32, 2019, 32);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(33, 2019, 33);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(34, 2019, 34);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(35, 2019, 35);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(36, 2019, 36);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(37, 2019, 37);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(38, 2019, 38);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(39, 2019, 39);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(40, 2019, 40);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(41, 2019, 41);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(42, 2019, 42);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(43, 2019, 43);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(44, 2019, 44);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(45, 2019, 45);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(46, 2019, 46);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(47, 2019, 47);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(48, 2019, 48);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(49, 2019, 49);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(50, 2019, 50);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(51, 2019, 51);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(52, 2019, 52);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(53, 2019, 53);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(54, 2019, 54);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(55, 2019, 55);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(56, 2019, 56);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(57, 2019, 57);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(58, 2019, 58);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(59, 2019, 59);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(60, 2019, 60);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(61, 2019, 61);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(62, 2019, 62);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(63, 2019, 63);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(64, 2019, 64);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(65, 2019, 65);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(66, 2019, 66);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(67, 2019, 67);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(68, 2019, 68);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(69, 2019, 69);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(70, 2019, 70);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(71, 2019, 71);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(72, 2019, 72);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(73, 2019, 73);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(74, 2019, 74);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(75, 2019, 75);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(76, 2019, 76);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(77, 2019, 77);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(78, 2019, 78);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(79, 2019, 79);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(80, 2019, 80);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(81, 2019, 81);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(82, 2019, 82);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(83, 2019, 83);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(84, 2019, 84);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(85, 2019, 85);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(86, 2019, 86);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(87, 2019, 87);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(88, 2019, 88);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(89, 2019, 89);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(90, 2019, 90);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(91, 2019, 91);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(92, 2019, 92);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(93, 2019, 93);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(94, 2019, 94);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(95, 2019, 95);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(96, 2019, 96);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(97, 2019, 97);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(98, 2019, 98);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(99, 2019, 99);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(100, 2019, 100);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(101, 2019, 101);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(102, 2019, 102);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(103, 2019, 103);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(104, 2019, 104);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(105, 2019, 105);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(106, 2019, 106);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(107, 2019, 107);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(108, 2019, 108);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(109, 2019, 109);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(110, 2019, 110);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(111, 2019, 111);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(112, 2019, 112);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(113, 2019, 113);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(114, 2019, 114);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(115, 2019, 115);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(116, 2019, 116);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(117, 2019, 117);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(118, 2019, 118);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(119, 2019, 119);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(120, 2019, 120);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(121, 2019, 121);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(122, 2019, 122);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(123, 2019, 123);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(124, 2019, 124);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(125, 2019, 125);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(126, 2019, 126);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(127, 2019, 127);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(128, 2019, 128);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(129, 2019, 129);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(130, 2019, 130);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(131, 2019, 131);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(132, 2019, 132);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(133, 2019, 133);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(134, 2019, 134);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(135, 2019, 135);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(136, 2019, 136);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(137, 2019, 137);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(138, 2019, 138);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(139, 2019, 139);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(140, 2019, 140);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(141, 2019, 141);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(142, 2019, 142);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(143, 2019, 143);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(144, 2019, 144);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(145, 2019, 145);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(146, 2019, 146);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(147, 2019, 147);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(148, 2019, 148);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(149, 2019, 149);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(150, 2019, 150);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(151, 2019, 151);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(152, 2019, 152);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(153, 2019, 153);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(154, 2019, 154);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(155, 2019, 155);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(156, 2019, 156);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(157, 2019, 157);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(158, 2019, 158);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(159, 2019, 159);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(160, 2019, 160);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(161, 2019, 161);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(162, 2019, 162);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(163, 2019, 163);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(164, 2019, 164);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(165, 2019, 165);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(166, 2019, 166);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(167, 2019, 167);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(168, 2019, 168);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(169, 2019, 169);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(170, 2019, 170);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(171, 2019, 171);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(172, 2019, 172);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(173, 2019, 173);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(174, 2019, 174);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(175, 2019, 175);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(176, 2019, 176);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(177, 2019, 177);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(178, 2019, 178);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(179, 2019, 179);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(180, 2019, 180);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(181, 2019, 181);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(182, 2019, 182);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(183, 2019, 183);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(184, 2019, 184);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(185, 2019, 185);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(186, 2019, 186);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(187, 2019, 187);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(188, 2019, 188);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(189, 2019, 189);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(190, 2019, 190);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(191, 2019, 191);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(192, 2019, 192);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(193, 2019, 193);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(194, 2019, 194);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(195, 2019, 195);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(196, 2019, 196);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(197, 2019, 197);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(198, 2019, 198);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(199, 2019, 199);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(200, 2019, 200);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(201, 2019, 201);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(202, 2019, 202);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(203, 2019, 203);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(204, 2019, 204);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(205, 2019, 205);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(206, 2019, 206);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(207, 2019, 207);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(208, 2019, 208);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(209, 2019, 209);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(210, 2019, 210);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(211, 2019, 211);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(212, 2019, 212);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(213, 2019, 213);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(214, 2019, 214);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(215, 2019, 215);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(216, 2019, 216);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(217, 2019, 217);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(218, 2019, 218);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(219, 2019, 219);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(220, 2019, 220);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(221, 2019, 221);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(222, 2019, 222);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(223, 2019, 223);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(224, 2019, 224);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(225, 2019, 225);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(226, 2019, 226);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(227, 2019, 227);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(228, 2019, 228);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(229, 2019, 229);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(230, 2019, 230);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(231, 2019, 231);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(232, 2019, 232);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(233, 2019, 233);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(234, 2019, 234);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(235, 2019, 235);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(236, 2019, 236);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(237, 2019, 237);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(238, 2019, 238);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(239, 2019, 239);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(240, 2019, 240);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(241, 2019, 241);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(242, 2019, 242);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(243, 2019, 243);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(244, 2019, 244);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(245, 2019, 245);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(246, 2019, 246);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(247, 2019, 247);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(248, 2019, 248);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(249, 2019, 249);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(250, 2019, 250);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(251, 2019, 251);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(252, 2019, 252);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(253, 2019, 253);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(254, 2019, 254);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(255, 2019, 255);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(256, 2019, 256);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(257, 2019, 257);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(258, 2019, 258);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(259, 2019, 259);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(260, 2019, 260);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(261, 2019, 261);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(262, 2019, 262);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(263, 2019, 263);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(264, 2019, 264);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(265, 2019, 265);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(266, 2019, 266);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(267, 2019, 267);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(268, 2019, 268);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(269, 2019, 269);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(270, 2019, 270);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(271, 2019, 271);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(272, 2019, 272);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(273, 2019, 273);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(274, 2019, 274);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(275, 2019, 275);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(276, 2019, 276);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(277, 2019, 277);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(278, 2019, 278);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(279, 2019, 279);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(280, 2019, 280);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(281, 2019, 281);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(282, 2019, 282);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(283, 2019, 283);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(284, 2019, 284);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(285, 2019, 285);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(286, 2019, 286);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(287, 2019, 287);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(288, 2019, 288);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(289, 2019, 289);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(290, 2019, 290);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(291, 2019, 291);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(292, 2019, 292);
+INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador) VALUES(293, 2019, 293);
+
+
+/*
+
+INSERT INTO Club VALUES ('0', 'Belenenses SAD', '1919', '0'); 0 - 15
+INSERT INTO Club VALUES ('1', 'Boavista FC', '1919', '1'); 16 - 31
+INSERT INTO Club VALUES ('2', 'CD Santa Clara', '1919', '2'); 32 - 47
+INSERT INTO Club VALUES ('3', 'CD Tondela', '1919', '3'); 48 - 62
+INSERT INTO Club VALUES ('4', 'CS Maritimo', '1919', '4'); 63 - 78
+INSERT INTO Club VALUES ('5', 'Desportivo das Aves', '1919', '5'); 79 - 94
+INSERT INTO Club VALUES ('6', 'FC Famalicão', '1919', '6'); 95 - 110
+INSERT INTO Club VALUES ('7', 'FC Porto', '1893', '7'); 111 - 133
+INSERT INTO Club VALUES ('8', 'Gil Vicente FC', '1919', '6'); 134 - 149
+INSERT INTO Club VALUES ('9', 'Moreirense FC', '1919', '9'); 150 - 165
+INSERT INTO Club VALUES ('10', 'Paços de Ferreira', '1919', '10'); 166 - 181 
+INSERT INTO Club VALUES ('11', 'Portimonense SC', '1919', '11'); 182 - 197
+INSERT INTO Club VALUES ('12', 'Rio Ave', '1919', '12'); 198 - 213
+INSERT INTO Club VALUES ('13', 'SL Benfica', '1919', '13'); 214 - 229
+INSERT INTO Club VALUES ('14', 'Sporting CP', '1919', '14'); 230 - 245
+INSERT INTO Club VALUES ('15', 'Sporting de Braga', '1919', '15'); 246 - 261
+INSERT INTO Club VALUES ('16', 'Vitória de Guimarães', '1919', '16'); 262 - 277
+INSERT INTO Club VALUES ('17', 'Vitória de Setúbal', '1919', '17'); 278 - 293
+
+
+*/
