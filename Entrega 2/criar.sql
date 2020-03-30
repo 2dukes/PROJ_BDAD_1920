@@ -19,6 +19,7 @@ DROP TABLE IF EXISTS EquipaFuncionarios;
 DROP TABLE IF EXISTS EstatisticaJogadorNumJogo;
 DROP TABLE IF EXISTS EstatisticaJogadorEpoca;
 DROP TABLE IF EXISTS Estadio;
+DROP TABLE IF EXISTS EstadioCapacidadeVIP;
 DROP TABLE IF EXISTS EstatisticaClubeJogo;
 
 DROP TABLE IF EXISTS Golo;
@@ -31,12 +32,14 @@ DROP TABLE IF EXISTS ForaDeJogo;
 DROP TABLE IF EXISTS Assistencia;
 
 DROP TABLE IF EXISTS EventoJogo;
+DROP TABLE IF EXISTS ArbitroJogo;
 DROP TABLE IF EXISTS Arbitro;
 DROP TABLE IF EXISTS Jogo;
 DROP TABLE IF EXISTS Jornada;
 DROP TABLE IF EXISTS PatrocinadorEpoca;
 DROP TABLE IF EXISTS PatrocinadorClube;
 DROP TABLE IF EXISTS Patrocinador;
+DROP TABLE IF EXISTS Rank;
 DROP TABLE IF EXISTS Embaixador;
 
 DROP TABLE IF EXISTS Jogador;
@@ -60,6 +63,11 @@ CREATE TABLE Pessoa (
 
 CREATE TABLE Delegado (
     idPessoa INTEGER NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Delegado_PK PRIMARY KEY (idPessoa),
     CONSTRAINT Delegado_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa(idPessoa)
@@ -78,6 +86,11 @@ CREATE TABLE Clube (
 CREATE TABLE Jogador (
     idPessoa INTEGER NOT NULL,
     idClube REFERENCES Clube,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
     
     CONSTRAINT Jogador_PK PRIMARY KEY (idPessoa),
     CONSTRAINT Jogador_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -97,6 +110,7 @@ CREATE TABLE Epoca (
     nomeLiga TEXT NOT NULL,
     paisLiga TEXT NOT NULL,
 
+    CONSTRAINT AnoInicio_AnoFim CHECK(anoFim = (anoInicio + 1))
     CONSTRAINT Epoca_PK PRIMARY KEY (anoInicio),
     CONSTRAINT Epoca_FK1 FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nome, pais)
 );
@@ -116,12 +130,27 @@ CREATE TABLE ClassificacaoDoClubeNaEpoca (
     CONSTRAINT ClassificacaoDoClubeNaEpoca_FK FOREIGN KEY (epoca) REFERENCES Epoca
 );
 
+CREATE TABLE Rank (
+    rank TEXT NOT NULL,
+    valorInvestido INTEGER NOT NULL,
+
+    CONSTRAINT Rank_PK PRIMARY KEY(rank),
+    CONSTRAINT rank_CHECK CHECK (rank LIKE 'bronze' OR rank LIKE 'prata' OR rank LIKE 'ouro'),
+    CONSTRAINT valorInvestido_CHECK  CHECK ((rank LIKE  'bronze' AND valorInvestido = 250000) OR
+                                            (rank LIKE 'prata' AND valorInvestido = 500000) OR 
+                                            (rank LIKE 'ouro' AND valorInvestido = 1000000))
+
+);
+
 CREATE TABLE Patrocinador (
     idPatrocinador INTEGER NOT NULL,
     nome TEXT NOT NULL,
+    rank TEXT NOT NULL,
 
-    CONSTRAINT Patrocinador PRIMARY KEY (idPatrocinador)
+    CONSTRAINT Patrocinador PRIMARY KEY (idPatrocinador),
+    CONSTRAINT Patrocinador_Rank FOREIGN KEY (rank) REFERENCES Rank(rank)  
 );
+
 
 CREATE TABLE PatrocinadorEpoca (
     idPatrocinador INTEGER NOT NULL,
@@ -169,9 +198,23 @@ CREATE TABLE Arbitro (
     idPessoa INTEGER NOT NULL,
     classificacao INTEGER DEFAULT 0 CHECK (classificacao >= 0),
     numPremiosGanhos INTEGER DEFAULT 0 CHECK (numPremiosGanhos >= 0),
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
     
     CONSTRAINT Arbitro_PK PRIMARY KEY (idPessoa),
     CONSTRAINT Arbitro_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa (idPessoa)
+);
+
+CREATE TABLE ArbitroJogo (
+    idArbitro INTEGER NOT NULL,
+    idJogo INTEGER NOT NULL,
+
+    CONSTRAINT ArbitroJogo_PK PRIMARY KEY (idArbitro),
+    CONSTRAINT ArbitroJogoJogo_FK_Pessoa FOREIGN KEY (idArbitro) REFERENCES Pessoa(idPessoa)
+    CONSTRAINT ArbitroJogoJogo_FK_Jogo FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
 );
 
 CREATE TABLE EventoJogo (
@@ -186,7 +229,10 @@ CREATE TABLE EventoJogo (
 CREATE TABLE Golo (
     idEvento INTEGER NOT NULL,
     idJogador INTEGER NOT NULL,
+    minuto INTEGER NOT NULL CHECK (minuto >= 0),
+    idJogo INTEGER NOT NULL,
     
+    CONSTRAINT GoloJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
     CONSTRAINT Golo_PK PRIMARY KEY(idEvento)
     CONSTRAINT Golo_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
 );
@@ -195,7 +241,10 @@ CREATE TABLE Cartao (
     idEvento INTEGER NOT NULL,
     idJogador INTEGER NOT NULL,
     cor TEXT NOT NULL CHECK (cor LIKE 'amarelo' OR cor LIKE 'vermelho'),
+    minuto INTEGER NOT NULL CHECK (minuto >= 0),
+    idJogo INTEGER NOT NULL,
     
+    CONSTRAINT CartaoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
     CONSTRAINT Cartao_PK PRIMARY KEY (idEvento),
     CONSTRAINT Cartao_FK FOREIGN KEY (idJogador) REFERENCES Jogador 
 );
@@ -203,7 +252,10 @@ CREATE TABLE Cartao (
 CREATE TABLE Falta (
     idEvento INTEGER NOT NULL,
     idJogador INTEGER NOT NULL,
+    minuto INTEGER NOT NULL CHECK (minuto >= 0),
+    idJogo INTEGER NOT NULL,
     
+    CONSTRAINT FaltaJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
     CONSTRAINT Falta_PK PRIMARY KEY(idEvento)
     CONSTRAINT Falta_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
 );
@@ -212,7 +264,11 @@ CREATE TABLE ForaDeJogo (
     idEvento INTEGER NOT NULL,
     idJogador INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
-    
+    minuto INTEGER NOT NULL CHECK (minuto >= 0),
+    idJogo INTEGER NOT NULL,
+
+
+    CONSTRAINT ForaDeJogoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
     CONSTRAINT ForaDeJogo_PK PRIMARY KEY(idEvento)
     CONSTRAINT ForaDeJogo_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador
     CONSTRAINT ForaDeJogo_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube 
@@ -222,7 +278,10 @@ CREATE TABLE Canto (
     idEvento INTEGER NOT NULL,
     idJogador INTEGER NOT NULL,
     idClube INTEGER NOT NULL,
+    minuto INTEGER NOT NULL CHECK (minuto >= 0),
+    idJogo INTEGER NOT NULL,
 
+    CONSTRAINT CantoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
     CONSTRAINT Canto_PK PRIMARY KEY(idEvento)
     CONSTRAINT Canto_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador
     CONSTRAINT Canto_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube 
@@ -231,7 +290,10 @@ CREATE TABLE Canto (
 CREATE TABLE Assistencia (
     idEvento INTEGER NOT NULL,
     idJogador INTEGER NOT NULL,
+    minuto INTEGER NOT NULL CHECK (minuto >= 0),
+    idJogo INTEGER NOT NULL,
     
+    CONSTRAINT AssistenciaJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
     CONSTRAINT Assistencia_PK PRIMARY KEY(idEvento)
     CONSTRAINT Assistencia_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
 );
@@ -240,7 +302,11 @@ CREATE TABLE Remate (
     idEvento INTEGER NOT NULL,
     idJogador INTEGER NOT NULL,
     naBaliza CHAR(1) NOT NULL CHECK (naBaliza LIKE '0' OR naBaliza LIKE '1'),
+    minuto INTEGER NOT NULL CHECK (minuto >= 0),
+    idJogo INTEGER NOT NULL,
     
+    
+    CONSTRAINT RemateJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
     CONSTRAINT Remate_PK PRIMARY KEY(idEvento)
     CONSTRAINT Remate_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
 );
@@ -264,6 +330,14 @@ CREATE TABLE EstatisticaClubeJogo (
     CONSTRAINT EstatisticaClubeJogo_FK2 FOREIGN KEY (idClube) REFERENCES Clube(idClube)
 );
 
+
+CREATE TABLE EstadioCapacidadeVIP (
+    capacidade INTEGER NOT NULL CHECK (capacidade >= 0),
+    numLugaresVIP INTEGER NOT NULL CHECK (numLugaresVIP = capacidade / 100),
+
+    CONSTRAINT EstadioCapacidadeVIP_PK PRIMARY KEY (capacidade)
+);
+
 CREATE TABLE Estadio (
     morada TEXT NOT NULL,
     capacidade INTEGER NOT NULL,
@@ -271,8 +345,10 @@ CREATE TABLE Estadio (
 
     CONSTRAINT Estadio_PK PRIMARY KEY (morada),
     CONSTRAINT Estadio_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube,
-    CONSTRAINT capacityCheck CHECK (capacidade >= 0)
-);  
+    CONSTRAINT capacityCheck CHECK (capacidade >= 0),
+    CONSTRAINT EstadioCapacidadeVIP_FK FOREIGN KEY (capacidade) REFERENCES EstadioCapacidadeVIP(capacidade)
+); 
+
 
 CREATE TABLE EstatisticaJogadorEpoca (
     idEstatisticaJogadorEpoca INTEGER NOT NULL,
@@ -318,6 +394,11 @@ CREATE TABLE EquipaFuncionarios (
 CREATE TABLE Medico (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Medico_PK PRIMARY KEY(idPessoa),
     CONSTRAINT Medico_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -327,6 +408,11 @@ CREATE TABLE Medico (
 CREATE TABLE Massagista (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Massagista_PK PRIMARY KEY(idPessoa),
     CONSTRAINT Massagista_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -336,6 +422,11 @@ CREATE TABLE Massagista (
 CREATE TABLE ResponsavelGuardaRoupa (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios_PK PRIMARY KEY(idPessoa),
     CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -345,6 +436,11 @@ CREATE TABLE ResponsavelGuardaRoupa (
 CREATE TABLE FuncionarioDeLimpeza (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT FuncionariosDeLimpeza_PK PRIMARY KEY(idPessoa),
     CONSTRAINT FuncionariosDeLimpeza_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -354,6 +450,11 @@ CREATE TABLE FuncionarioDeLimpeza (
 CREATE TABLE Olheiro (
     idPessoa INTEGER NOT NULL,
     idEquipaFuncionarios NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Olheiro_PK PRIMARY KEY(idPessoa),
     CONSTRAINT Olheiro_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -371,6 +472,11 @@ CREATE TABLE EquipaTecnica (
 CREATE TABLE TreinadorGuardaRedes (
     idPessoa INTEGER NOT NULL,
     idEquipaTecnica NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT TreinadorGuardaRedes_PK PRIMARY KEY(idPessoa),
     CONSTRAINT TreinadorGuardaRedes_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -380,6 +486,11 @@ CREATE TABLE TreinadorGuardaRedes (
 CREATE TABLE TreinadorAdjunto (
     idPessoa INTEGER NOT NULL,
     idEquipaTecnica NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
     
     CONSTRAINT TreinadorAdjunto_PK PRIMARY KEY(idPessoa),
     CONSTRAINT TreinadorAdjunto_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -389,6 +500,11 @@ CREATE TABLE TreinadorAdjunto (
 CREATE TABLE TreinadorPrincipal (
     idPessoa INTEGER NOT NULL,
     idEquipaTecnica NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
     
     CONSTRAINT TreinadorPrincipal_PK PRIMARY KEY(idPessoa),
     CONSTRAINT TreinadorPrincipal_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
@@ -399,6 +515,11 @@ CREATE TABLE Embaixador (
     idPessoa INTEGER NOT NULL,
     nomeLiga TEXT NOT NULL,
     paisLiga TEXT NOT NULL,
+    nome TEXT NOT NULL,
+    morada TEXT NOT NULL,
+    nacionalidade TEXT NOT NULL,
+    idade INTEGER NOT NULL,
+    telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Embaixador_PK PRIMARY KEY(idPessoa),
     CONSTRAINT Embaixador_FK_Liga FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nome, pais)
