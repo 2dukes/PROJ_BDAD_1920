@@ -70,7 +70,7 @@ CREATE TABLE Delegado (
     telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Delegado_PK PRIMARY KEY (idPessoa),
-    CONSTRAINT Delegado_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa(idPessoa)
+    CONSTRAINT Delegado_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa(idPessoa) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Clube (
@@ -80,7 +80,7 @@ CREATE TABLE Clube (
     idClassificacao INTEGER NOT NULL,
 
     CONSTRAINT Clube_PK PRIMARY KEY (idClube),
-    CONSTRAINT Clube_FK FOREIGN KEY (idClube) REFERENCES ClassificacaoDoClubeNaEpoca
+    CONSTRAINT Clube_FK FOREIGN KEY (idClassificacao) REFERENCES ClassificacaoDoClubeNaEpoca ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Jogador (
@@ -93,8 +93,8 @@ CREATE TABLE Jogador (
     telefone INTEGER UNIQUE NOT NULL,
     
     CONSTRAINT Jogador_PK PRIMARY KEY (idPessoa),
-    CONSTRAINT Jogador_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT Jogador_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube
+    CONSTRAINT Jogador_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Jogador_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Liga (
@@ -112,7 +112,7 @@ CREATE TABLE Epoca (
 
     CONSTRAINT AnoInicio_AnoFim CHECK(anoFim = (anoInicio + 1))
     CONSTRAINT Epoca_PK PRIMARY KEY (anoInicio),
-    CONSTRAINT Epoca_FK1 FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nome, pais)
+    CONSTRAINT Epoca_FK1 FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nome, pais) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE ClassificacaoDoClubeNaEpoca (
@@ -127,7 +127,7 @@ CREATE TABLE ClassificacaoDoClubeNaEpoca (
     epoca NOT NULL,
 
     CONSTRAINT ClassificacaoDoClubeNaEpoca_PK PRIMARY KEY (idClassificacao),
-    CONSTRAINT ClassificacaoDoClubeNaEpoca_FK FOREIGN KEY (epoca) REFERENCES Epoca
+    CONSTRAINT ClassificacaoDoClubeNaEpoca_FK FOREIGN KEY (epoca) REFERENCES Epoca ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Rank (
@@ -148,7 +148,7 @@ CREATE TABLE Patrocinador (
     rank TEXT NOT NULL,
 
     CONSTRAINT Patrocinador PRIMARY KEY (idPatrocinador),
-    CONSTRAINT Patrocinador_Rank FOREIGN KEY (rank) REFERENCES Rank(rank)  
+    CONSTRAINT Patrocinador_Rank FOREIGN KEY (rank) REFERENCES Rank(rank) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 
@@ -156,9 +156,9 @@ CREATE TABLE PatrocinadorEpoca (
     idPatrocinador INTEGER NOT NULL,
     epoca INTEGER NOT NULL,
     
-    CONSTRAINT PatrocinadorEpoca_FK1 FOREIGN KEY (idPatrocinador) REFERENCES Patrocinador(idPatrocinador),
-    CONSTRAINT PatrocinadorEpoca_FK2 FOREIGN KEY (epoca) REFERENCES Epoca(anoInicio),
-    CONSTRAINT PatrocinadorEpoca_PK PRIMARY KEY (idPatrocinador, epoca)
+    CONSTRAINT PatrocinadorEpoca_FK1 FOREIGN KEY (idPatrocinador) REFERENCES Patrocinador(idPatrocinador) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT PatrocinadorEpoca_FK2 FOREIGN KEY (epoca) REFERENCES Epoca(anoInicio) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT PatrocinadorEpoca_PK PRIMARY KEY (idPatrocinador, epoca) 
 );
 
 CREATE TABLE PatrocinadorClube (
@@ -166,8 +166,8 @@ CREATE TABLE PatrocinadorClube (
     idClube INTEGER NOT NULL,
 
     CONSTRAINT PatrocinadorClube_PK PRIMARY KEY (idPatrocinador, idClube),
-    CONSTRAINT PatrocinadorClube_FK1 FOREIGN KEY (idPatrocinador) REFERENCES Patrocinador(idPatrocinador),
-    CONSTRAINT PatrocinadorClube_FK2 FOREIGN KEY (idClube) REFERENCES Clube(idClube)
+    CONSTRAINT PatrocinadorClube_FK1 FOREIGN KEY (idPatrocinador) REFERENCES Patrocinador(idPatrocinador) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT PatrocinadorClube_FK2 FOREIGN KEY (idClube) REFERENCES Clube(idClube) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Jornada (
@@ -175,7 +175,7 @@ CREATE TABLE Jornada (
     epoca INTEGER NOT NULL,
     
     CONSTRAINT Jornada_PK PRIMARY KEY (idJornada),
-    CONSTRAINT Jornada_FK FOREIGN KEY (epoca) REFERENCES Epoca(anoInicio)
+    CONSTRAINT Jornada_FK FOREIGN KEY (epoca) REFERENCES Epoca(anoInicio) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Jogo (
@@ -188,10 +188,10 @@ CREATE TABLE Jogo (
     idClubeFora INTEGER NOT NULL,
 
     CONSTRAINT Jogo_PK PRIMARY KEY (idJogo),
-    CONSTRAINT Jogo_FK1 FOREIGN KEY (idJornada) REFERENCES Jornada(idJornada),
-    CONSTRAINT Jogo_PK2 FOREIGN KEY (idDelegado) REFERENCES Delegado(idPessoa),
-    CONSTRAINT Jogo_FK3 FOREIGN KEY (idClubeCasa) REFERENCES Clube(idClube),
-    CONSTRAINT Jogo_FK4 FOREIGN KEY (idClubeFora) REFERENCES Clube(idClube)
+    CONSTRAINT Jogo_FK1 FOREIGN KEY (idJornada) REFERENCES Jornada(idJornada) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Jogo_PK2 FOREIGN KEY (idDelegado) REFERENCES Delegado(idPessoa) ON DELETE SET NULL ON UPDATE CASCADE,
+    CONSTRAINT Jogo_FK3 FOREIGN KEY (idClubeCasa) REFERENCES Clube(idClube) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Jogo_FK4 FOREIGN KEY (idClubeFora) REFERENCES Clube(idClube) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Arbitro (
@@ -205,7 +205,7 @@ CREATE TABLE Arbitro (
     telefone INTEGER UNIQUE NOT NULL,
     
     CONSTRAINT Arbitro_PK PRIMARY KEY (idPessoa),
-    CONSTRAINT Arbitro_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa (idPessoa)
+    CONSTRAINT Arbitro_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa (idPessoa) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE ArbitroJogo (
@@ -213,8 +213,8 @@ CREATE TABLE ArbitroJogo (
     idJogo INTEGER NOT NULL,
 
     CONSTRAINT ArbitroJogo_PK PRIMARY KEY (idArbitro),
-    CONSTRAINT ArbitroJogoJogo_FK_Pessoa FOREIGN KEY (idArbitro) REFERENCES Pessoa(idPessoa)
-    CONSTRAINT ArbitroJogoJogo_FK_Jogo FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
+    CONSTRAINT ArbitroJogoJogo_FK_Pessoa FOREIGN KEY (idArbitro) REFERENCES Pessoa(idPessoa) ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT ArbitroJogoJogo_FK_Jogo FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE EventoJogo (
@@ -223,7 +223,7 @@ CREATE TABLE EventoJogo (
     idJogo INTEGER NOT NULL,
     
     CONSTRAINT EventoJogo_PK PRIMARY KEY (idEvento),
-    CONSTRAINT EventoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
+    CONSTRAINT EventoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE
 ); 
 
 CREATE TABLE Golo (
@@ -232,9 +232,9 @@ CREATE TABLE Golo (
     minuto INTEGER NOT NULL CHECK (minuto >= 0),
     idJogo INTEGER NOT NULL,
     
-    CONSTRAINT GoloJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
-    CONSTRAINT Golo_PK PRIMARY KEY(idEvento)
-    CONSTRAINT Golo_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
+    CONSTRAINT GoloJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Golo_PK PRIMARY KEY(idEvento),
+    CONSTRAINT Golo_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Cartao (
@@ -244,9 +244,9 @@ CREATE TABLE Cartao (
     minuto INTEGER NOT NULL CHECK (minuto >= 0),
     idJogo INTEGER NOT NULL,
     
-    CONSTRAINT CartaoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
+    CONSTRAINT CartaoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT Cartao_PK PRIMARY KEY (idEvento),
-    CONSTRAINT Cartao_FK FOREIGN KEY (idJogador) REFERENCES Jogador 
+    CONSTRAINT Cartao_FK FOREIGN KEY (idJogador) REFERENCES Jogador ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Falta (
@@ -255,9 +255,9 @@ CREATE TABLE Falta (
     minuto INTEGER NOT NULL CHECK (minuto >= 0),
     idJogo INTEGER NOT NULL,
     
-    CONSTRAINT FaltaJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
-    CONSTRAINT Falta_PK PRIMARY KEY(idEvento)
-    CONSTRAINT Falta_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
+    CONSTRAINT FaltaJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Falta_PK PRIMARY KEY(idEvento),
+    CONSTRAINT Falta_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE ForaDeJogo (
@@ -268,10 +268,10 @@ CREATE TABLE ForaDeJogo (
     idJogo INTEGER NOT NULL,
 
 
-    CONSTRAINT ForaDeJogoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
-    CONSTRAINT ForaDeJogo_PK PRIMARY KEY(idEvento)
-    CONSTRAINT ForaDeJogo_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador
-    CONSTRAINT ForaDeJogo_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube 
+    CONSTRAINT ForaDeJogoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT ForaDeJogo_PK PRIMARY KEY(idEvento),
+    CONSTRAINT ForaDeJogo_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador ON DELETE SET NULL ON UPDATE CASCADE,
+    CONSTRAINT ForaDeJogo_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Canto (
@@ -281,10 +281,10 @@ CREATE TABLE Canto (
     minuto INTEGER NOT NULL CHECK (minuto >= 0),
     idJogo INTEGER NOT NULL,
 
-    CONSTRAINT CantoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
-    CONSTRAINT Canto_PK PRIMARY KEY(idEvento)
-    CONSTRAINT Canto_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador
-    CONSTRAINT Canto_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube 
+    CONSTRAINT CantoJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Canto_PK PRIMARY KEY(idEvento),
+    CONSTRAINT Canto_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador ON DELETE SET NULL ON UPDATE CASCADE,
+    CONSTRAINT Canto_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Assistencia (
@@ -293,9 +293,9 @@ CREATE TABLE Assistencia (
     minuto INTEGER NOT NULL CHECK (minuto >= 0),
     idJogo INTEGER NOT NULL,
     
-    CONSTRAINT AssistenciaJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
-    CONSTRAINT Assistencia_PK PRIMARY KEY(idEvento)
-    CONSTRAINT Assistencia_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
+    CONSTRAINT AssistenciaJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Assistencia_PK PRIMARY KEY(idEvento), 
+    CONSTRAINT Assistencia_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Remate (
@@ -306,9 +306,9 @@ CREATE TABLE Remate (
     idJogo INTEGER NOT NULL,
     
     
-    CONSTRAINT RemateJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo)
-    CONSTRAINT Remate_PK PRIMARY KEY(idEvento)
-    CONSTRAINT Remate_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador 
+    CONSTRAINT RemateJogo_FK FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Remate_PK PRIMARY KEY(idEvento),
+    CONSTRAINT Remate_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE EstatisticaClubeJogo (
@@ -326,8 +326,8 @@ CREATE TABLE EstatisticaClubeJogo (
     numAssistencias INTEGER DEFAULT 0 CHECK (numAssistencias >= 0 AND numAssistencias <= numGolos),
 
     CONSTRAINT EstatisticaClubeJogo_PK PRIMARY KEY (idEstatisticaClube),
-    CONSTRAINT EstatisticaClubeJogo_FK1 FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo),
-    CONSTRAINT EstatisticaClubeJogo_FK2 FOREIGN KEY (idClube) REFERENCES Clube(idClube)
+    CONSTRAINT EstatisticaClubeJogo_FK1 FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT EstatisticaClubeJogo_FK2 FOREIGN KEY (idClube) REFERENCES Clube(idClube) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -344,9 +344,9 @@ CREATE TABLE Estadio (
     idClube INTEGER NOT NULL,
 
     CONSTRAINT Estadio_PK PRIMARY KEY (morada),
-    CONSTRAINT Estadio_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube,
+    CONSTRAINT Estadio_FK_Clube FOREIGN KEY (idClube) REFERENCES Clube ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT capacityCheck CHECK (capacidade >= 0),
-    CONSTRAINT EstadioCapacidadeVIP_FK FOREIGN KEY (capacidade) REFERENCES EstadioCapacidadeVIP(capacidade)
+    CONSTRAINT EstadioCapacidadeVIP_FK FOREIGN KEY (capacidade) REFERENCES EstadioCapacidadeVIP(capacidade) ON DELETE CASCADE ON UPDATE CASCADE
 ); 
 
 
@@ -362,8 +362,8 @@ CREATE TABLE EstatisticaJogadorEpoca (
     idJogador INTEGER NOT NULL,
     
     CONSTRAINT EstatisticaJogadorEpoca_PK PRIMARY KEY (idEstatisticaJogadorEpoca),
-    CONSTRAINT EstatisticaJogadorEpoca_FK_Epoca FOREIGN KEY (epoca) REFERENCES Epoca,
-    CONSTRAINT EstatisticaJogadorEpoca_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador,
+    CONSTRAINT EstatisticaJogadorEpoca_FK_Epoca FOREIGN KEY (epoca) REFERENCES Epoca ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT EstatisticaJogadorEpoca_FK_Jogador FOREIGN KEY (idJogador) REFERENCES Jogador ON DELETE SET NULL ON UPDATE CASCADE,
     CONSTRAINT EstatisticaJogarEpocaCheck CHECK ((numAssistencias >= 0) AND 
                                                 (numGolos >= 0) AND 
                                                 (ganhouPremioMelhorMarcador LIKE '0' OR ganhouPremioMelhorMarcador LIKE '1') AND
@@ -377,8 +377,8 @@ CREATE TABLE EstatisticaJogadorNumJogo (
     numMinutosJogados INTEGER NOT NULL,
     
     CONSTRAINT EstatisticaJogadorNumJogo_PK PRIMARY KEY (idJogador, idJogo),
-    CONSTRAINT EstatisticaJogadorNumJogo_FK_PESSOA FOREIGN KEY (idJogador) REFERENCES Pessoa,
-    CONSTRAINT EstatisticaJogadorNumJogo_FK_Jogo FOREIGN KEY (idJogo) REFERENCES Jogo  
+    CONSTRAINT EstatisticaJogadorNumJogo_FK_PESSOA FOREIGN KEY (idJogador) REFERENCES Pessoa ON DELETE SET NULL ON UPDATE CASCADE,
+    CONSTRAINT EstatisticaJogadorNumJogo_FK_Jogo FOREIGN KEY (idJogo) REFERENCES Jogo ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -387,7 +387,7 @@ CREATE TABLE EquipaFuncionarios (
     idClube INTEGER NOT NULL,
 
     CONSTRAINT EquipaFuncionarios_PK PRIMARY KEY(idEquipaFuncionarios),
-    CONSTRAINT EquipaFuncionarios_FK FOREIGN KEY (idClube) REFERENCES Clube
+    CONSTRAINT EquipaFuncionarios_FK FOREIGN KEY (idClube) REFERENCES Clube ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -401,8 +401,8 @@ CREATE TABLE Medico (
     telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Medico_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Medico_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT Medico_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
+    CONSTRAINT Medico_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Medico_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Massagista (
@@ -415,8 +415,8 @@ CREATE TABLE Massagista (
     telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Massagista_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Massagista_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT Massagista_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
+    CONSTRAINT Massagista_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Massagista_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE ResponsavelGuardaRoupa (
@@ -428,9 +428,9 @@ CREATE TABLE ResponsavelGuardaRoupa (
     idade INTEGER NOT NULL,
     telefone INTEGER UNIQUE NOT NULL,
 
-    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
+    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios_PK PRIMARY KEY(idPessoa) ,
+    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT ResponsavelGuardaRoupa_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE FuncionarioDeLimpeza (
@@ -443,8 +443,8 @@ CREATE TABLE FuncionarioDeLimpeza (
     telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT FuncionariosDeLimpeza_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT FuncionariosDeLimpeza_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT FuncionariosDeLimpeza_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
+    CONSTRAINT FuncionariosDeLimpeza_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FuncionariosDeLimpeza_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Olheiro (
@@ -457,8 +457,8 @@ CREATE TABLE Olheiro (
     telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Olheiro_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Olheiro_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT Olheiro_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios
+    CONSTRAINT Olheiro_FK_Pessoa FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT Olheiro_FK_EquipaFuncionarios FOREIGN KEY (idEquipaFuncionarios) REFERENCES EquipaFuncionarios ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE EquipaTecnica (
@@ -466,7 +466,7 @@ CREATE TABLE EquipaTecnica (
     idClube INTEGER NOT NULL,
     
     CONSTRAINT EquipaTecnica_PK PRIMARY KEY(idEquipaTecnica),
-    CONSTRAINT EquipaTecnica_FK FOREIGN KEY (idClube) REFERENCES Clube
+    CONSTRAINT EquipaTecnica_FK FOREIGN KEY (idClube) REFERENCES Clube ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE TreinadorGuardaRedes (
@@ -479,8 +479,8 @@ CREATE TABLE TreinadorGuardaRedes (
     telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT TreinadorGuardaRedes_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT TreinadorGuardaRedes_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT TreinadorGuardaRedes_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica
+    CONSTRAINT TreinadorGuardaRedes_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT TreinadorGuardaRedes_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE TreinadorAdjunto (
@@ -493,8 +493,8 @@ CREATE TABLE TreinadorAdjunto (
     telefone INTEGER UNIQUE NOT NULL,
     
     CONSTRAINT TreinadorAdjunto_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT TreinadorAdjunto_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT TreinadorAdjunto_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica
+    CONSTRAINT TreinadorAdjunto_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT TreinadorAdjunto_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE TreinadorPrincipal (
@@ -507,8 +507,8 @@ CREATE TABLE TreinadorPrincipal (
     telefone INTEGER UNIQUE NOT NULL,
     
     CONSTRAINT TreinadorPrincipal_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT TreinadorPrincipal_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa,
-    CONSTRAINT TreinadorPrincipal_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica
+    CONSTRAINT TreinadorPrincipal_FK FOREIGN KEY (idPessoa) REFERENCES Pessoa ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT TreinadorPrincipal_FK_EquipaTecnica FOREIGN KEY (idEquipaTecnica) REFERENCES EquipaTecnica ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Embaixador (
@@ -522,7 +522,7 @@ CREATE TABLE Embaixador (
     telefone INTEGER UNIQUE NOT NULL,
 
     CONSTRAINT Embaixador_PK PRIMARY KEY(idPessoa),
-    CONSTRAINT Embaixador_FK_Liga FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nome, pais)
+    CONSTRAINT Embaixador_FK_Liga FOREIGN KEY (nomeLiga, paisLiga) REFERENCES Liga(nome, pais) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
   
