@@ -1,4 +1,4 @@
--- Top 3 Clubes com o maior número de golos marcados (em caso de empate vê o/os que tiverem menos golos sofridos - podendo o resultado apresentado ter mais que 3 equipas) 
+-- Top 3 Clubes com o maior número de golos marcados (em caso de empate vê o/os que tiverem menos golos sofridos)
 
 -- Golos Sofridos por Equipa
 
