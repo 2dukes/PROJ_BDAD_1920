@@ -62,4 +62,4 @@ WHERE numGolosMarcados >= (SELECT min(numGolosMarcados)
                             )
 AND numGolosSofridos = (SELECT min(numGolosSofridos) 
                         FROM golos_marcados_sofridos_clube GMSC 
-                        WHERE GMSC.numGolosMarcados = motherTable.numGolosMarcados);  
+                        WHERE GMSC.numGolosMarcados = motherTable.numGolosMarcados);

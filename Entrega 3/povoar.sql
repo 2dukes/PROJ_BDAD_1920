@@ -1792,7 +1792,7 @@ INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALU
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(221, 3, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(222, 3, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(223, 3, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(224, 3, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(229, 3, 90);
 
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(166, 3, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(167, 3, 90);
@@ -1864,7 +1864,7 @@ INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALU
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(253, 6, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(254, 6, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(255, 6, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(256, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(261, 6, 90);
 
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(150, 6, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(151, 6, 90);
@@ -1876,7 +1876,7 @@ INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALU
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(157, 6, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(158, 6, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(159, 6, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(160, 6, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(165, 6, 90);
 
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(278, 7, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(279, 7, 90);
@@ -1912,7 +1912,7 @@ INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALU
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(205, 8, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(206, 8, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(207, 8, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(208, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(213, 8, 90);
 
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(262, 8, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(263, 8, 90);
@@ -1924,7 +1924,7 @@ INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALU
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(269, 8, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(270, 8, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(271, 8, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(272, 8, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(277, 8, 90);
 
 
 -- EstatisticaJogadorEpoca
