@@ -24,7 +24,3 @@ where
         Arbitros.equipaCasa = 7
         or Arbitros.equipaFora = 7 
     );
-
-
-
--- mudar relatório (pág. 6), arbitro tem que herdar atributos de pessoa
