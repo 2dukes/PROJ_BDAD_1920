@@ -12,7 +12,7 @@ from (
         join Clube clubeFora on Jogo.idClubeFora = clubeFora.idClube
         join Arbitro on ArbitroJogo.idArbitro = Arbitro.idPessoa
 ) Arbitros
-where 
+where
     Arbitros.anoEpoca = 2019 and
     Arbitros.numJornada = (
         SELECT min(idJornada) 

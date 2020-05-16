@@ -1318,6 +1318,7 @@ INSERT INTO PatrocinadorClube VALUES (2, 14);
 INSERT INTO PatrocinadorClube VALUES (3, 15);
 INSERT INTO PatrocinadorClube VALUES (0, 16);
 INSERT INTO PatrocinadorClube VALUES (1, 17);
+INSERT INTO PatrocinadorClube VALUES (4, 17);
 
 
 
@@ -1487,11 +1488,15 @@ INSERT INTO EventoJogo VALUES ('50', '10', '1');
 INSERT INTO EventoJogo VALUES ('51', '10', '1');
 INSERT INTO EventoJogo VALUES ('52', '20', '1');
 INSERT INTO EventoJogo VALUES ('53', '20', '1');
+INSERT INTO EventoJogo VALUES ('54', '20', '1');
+INSERT INTO EventoJogo VALUES ('55', '20', '1');
 
 INSERT INTO Golo VALUES ('50', '97', '10', '1');
 INSERT INTO Golo VALUES ('51', '98', '10', '1');
 INSERT INTO Remate VALUES ('52', '97', '1', '20', '1');
 INSERT INTO Remate VALUES ('53', '98', '1', '20', '1');
+INSERT INTO Cartao VALUES ('54', '97','vermelho', '20', '1');
+INSERT INTO Cartao VALUES ('55', '98','amarelo', '20', '1');
 
 INSERT INTO Jogo VALUES ('2', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '7', '1', '522', '8', '7');
 
