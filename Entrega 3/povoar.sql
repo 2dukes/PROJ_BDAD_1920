@@ -1734,17 +1734,17 @@ INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALU
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(191, 0, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(192, 0, 90);
 
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(16, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(17, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(18, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(19, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(20, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(21, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(22, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(23, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(24, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(25, 1, 90);
-INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(26, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(32, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(33, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(34, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(35, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(36, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(37, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(38, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(39, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(40, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(41, 1, 90);
+INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(42, 1, 90);
 
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(95, 1, 90);
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(96, 1, 90);
