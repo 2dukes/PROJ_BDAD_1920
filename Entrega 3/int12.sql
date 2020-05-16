@@ -1,0 +1,1 @@
+-- Top 3 clubes com a melhor eficácia de golos (número de golos / número de remates)

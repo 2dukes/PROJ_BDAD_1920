@@ -1,0 +1,1 @@
+-- Equipa com menos cartões na época 2019

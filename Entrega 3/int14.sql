@@ -1,0 +1,1 @@
+-- Patrocinadores que patrocinam um clube e uma época ao mesmo tempo

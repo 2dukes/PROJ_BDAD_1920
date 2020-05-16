@@ -1,0 +1,1 @@
+-- número de clubes por cidade

@@ -1,0 +1,1 @@
+-- Média do número de remates por jogo ao longo da época, para cada clube.
