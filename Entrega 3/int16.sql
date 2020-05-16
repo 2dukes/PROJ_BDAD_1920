@@ -5,7 +5,7 @@
 DROP VIEW IF EXISTS jogos_equipas;
 CREATE VIEW jogos_equipas AS
     SELECT Jogo.idClubeCasa AS 'idClube', Jogo.idJogo FROM Jogo
-    UNION
+    UNION 
     SELECT Jogo.idClubeFora AS 'idClube', Jogo.idJogo FROM Jogo; 
 
 DROP VIEW IF EXISTS golos_sofridos_clube;
@@ -62,4 +62,5 @@ WHERE numGolosMarcados >= (SELECT min(numGolosMarcados)
                             )
 AND numGolosSofridos = (SELECT min(numGolosSofridos) 
                         FROM golos_marcados_sofridos_clube GMSC 
-                        WHERE GMSC.numGolosMarcados = motherTable.numGolosMarcados);
+                        WHERE GMSC.numGolosMarcados = motherTable.numGolosMarcados)
+LIMIT 3;  
