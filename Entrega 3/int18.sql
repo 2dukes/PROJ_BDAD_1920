@@ -124,29 +124,21 @@ CREATE VIEW num_pontos AS
     SELECT Clube.idClube, Clube.nome, (
                                         SELECT COUNT(*)
                                         FROM Resultados R2
-                                        WHERE R2.idClubeCasa = Clube.idClube AND R2.numGolosCasa > R2.numGolosFora
-                                        ) * 3 AS 'PontosVitoriasCasa', (
+                                        WHERE (R2.idClubeCasa = Clube.idClube AND R2.numGolosCasa > R2.numGolosFora) OR (R2.idClubeFora = Clube.idClube AND R2.numGolosCasa < R2.numGolosFora)
+                                        ) * 3 AS 'PontosVitorias', (
                                                                     SELECT COUNT(*)
                                                                     FROM Resultados R2
-                                                                    WHERE R2.idClubeCasa = Clube.idClube AND R2.numGolosCasa = R2.numGolosFora
-                                                                ) AS 'PontosEmpatesCasa', (
-                                                                                        SELECT COUNT(*)
-                                                                                        FROM Resultados R2
-                                                                                        WHERE R2.idClubeFora = Clube.idClube AND R2.numGolosCasa < R2.numGolosFora
-                                                                                        ) * 3 AS 'PontosVitoriasFora', (
-                                                                                                                            SELECT COUNT(*)
-                                                                                                                            FROM Resultados R2
-                                                                                                                            WHERE R2.idClubeFora = Clube.idClube AND R2.numGolosCasa = R2.numGolosFora
-                                                                                                                        ) AS 'PontosEmpatesFora'
+                                                                    WHERE (R2.idClubeCasa = Clube.idClube OR R2.idClubeFora = Clube.idClube) AND (R2.numGolosCasa = R2.numGolosFora)  
+                                                                ) AS 'PontosEmpates'
     FROM Clube;
 
 -- SELECT * FROM num_pontos;
 
 -- Classificação!
 
-SELECT num_pontos.idClube, num_pontos.nome, PontosVitoriasCasa + PontosVitoriasFora + PontosEmpatesCasa + PontosEmpatesFora AS 'Pontos'
+SELECT num_pontos.idClube, num_pontos.nome, PontosVitorias + PontosEmpates AS 'Pontos'
 FROM num_pontos
 JOIN golos_marcados_sofridos_clube GMSC
 ON num_pontos.idClube = GMSC.idClube
-ORDER BY (PontosVitoriasCasa + PontosVitoriasFora + PontosEmpatesCasa + PontosEmpatesFora) DESC, (GMSC.numGolosMarcados - GMSC.numGolosSofridos) DESC, GMSC.numGolosMarcados DESC; 
+ORDER BY (PontosVitorias + PontosEmpates) DESC, (GMSC.numGolosMarcados - GMSC.numGolosSofridos) DESC, GMSC.numGolosMarcados DESC; 
 
