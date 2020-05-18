@@ -1465,7 +1465,7 @@ INSERT INTO Jornada VALUES ('2', '2019');
 
 -- Jornada 1
 
-INSERT INTO Jogo VALUES ('0', strftime("%d/%m/%Y %H:%M", "2019-08-11 20:00"), '5', '1', '520', '11', '0');
+INSERT INTO Jogo VALUES ('0', strftime("%d/%m/%Y %H:%M", "2019-08-11 20:00"), '5', '1', '520', '11', '0', '0');
 
 INSERT INTO ArbitroJogo VALUES('444', '0');
 INSERT INTO ArbitroJogo VALUES('445', '0');
@@ -1477,8 +1477,9 @@ INSERT INTO EventoJogo VALUES ('1', '10', '0');
 
 INSERT INTO Remate VALUES ('0', '1', '0', '5', '0');
 INSERT INTO Remate VALUES ('1', '182', '0', '10', '0');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 0;
 
-INSERT INTO Jogo VALUES ('1', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '6', '1', '521', '2', '6');
+INSERT INTO Jogo VALUES ('1', strftime("%d/%m/%Y %H:%M", "2018-08-12 20:00"), '6', '1', '521', '2', '6', '0');
 
 INSERT INTO ArbitroJogo VALUES('448', '1');
 INSERT INTO ArbitroJogo VALUES('449', '1');
@@ -1498,8 +1499,10 @@ INSERT INTO Remate VALUES ('52', '97', '1', '20', '1');
 INSERT INTO Remate VALUES ('53', '98', '1', '20', '1');
 INSERT INTO Cartao VALUES ('54', '97','vermelho', '20', '1');
 INSERT INTO Cartao VALUES ('55', '98','amarelo', '20', '1');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 1;
 
-INSERT INTO Jogo VALUES ('2', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '7', '1', '522', '8', '7');
+
+INSERT INTO Jogo VALUES ('2', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '7', '1', '522', '8', '7', '0');
 
 INSERT INTO ArbitroJogo VALUES('452', '2');
 INSERT INTO ArbitroJogo VALUES('453', '2');
@@ -1523,9 +1526,9 @@ INSERT INTO Remate VALUES ('103','135', '1', '30', '2');
 INSERT INTO Remate VALUES ('105', '111', '1', '30', '2');
 INSERT INTO Canto VALUES ('106', '97', '1', '70', '2');
 INSERT INTO Falta VALUES ('107', '98', '80', '2');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 2;
 
-
-INSERT INTO Jogo VALUES ('3', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '4', '1', '523', '13', '10');
+INSERT INTO Jogo VALUES ('3', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '4', '1', '523', '13', '10', '0');
 
 INSERT INTO ArbitroJogo VALUES('456', '3');
 INSERT INTO ArbitroJogo VALUES('457', '3');
@@ -1553,8 +1556,10 @@ INSERT INTO Remate VALUES ('126', '229', '1', '20', '3');
 INSERT INTO Remate VALUES ('127', '229', '1', '20', '3');
 INSERT INTO Remate VALUES ('128', '229', '1', '40', '3');
 INSERT INTO Remate VALUES ('129', '229', '1', '40', '3');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 3;
 
-INSERT INTO Jogo VALUES ('4', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '6', '1', '524', '1', '5');
+
+INSERT INTO Jogo VALUES ('4', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '6', '1', '524', '1', '5', '0');
 
 INSERT INTO ArbitroJogo VALUES('460', '4');
 INSERT INTO ArbitroJogo VALUES('461', '4');
@@ -1574,8 +1579,10 @@ INSERT INTO Golo VALUES ('142', '79', '20', '4');
 INSERT INTO Remate VALUES ('145', '16', '1', '10', '4');
 INSERT INTO Remate VALUES ('146', '17', '1', '20', '4');
 INSERT INTO Remate VALUES ('147', '79', '1', '20', '4');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 4;
 
-INSERT INTO Jogo VALUES ('5', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '6', '1', '525', '4', '14');
+
+INSERT INTO Jogo VALUES ('5', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '6', '1', '525', '4', '14', '0');
 
 INSERT INTO ArbitroJogo VALUES('464', '5');
 INSERT INTO ArbitroJogo VALUES('465', '5');
@@ -1593,8 +1600,10 @@ INSERT INTO Golo VALUES ('161', '230','10', '5');
 INSERT INTO Remate VALUES ('163', '63', '1', '10', '5');
 INSERT INTO Remate VALUES ('164', '230', '1', '20', '5');
 INSERT INTO Remate VALUES ('165', '79', '1', '20', '5');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 5;
 
-INSERT INTO Jogo VALUES ('6', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '7', '1', '526', '15', '9');
+
+INSERT INTO Jogo VALUES ('6', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '7', '1', '526', '15', '9', '0');
 
 INSERT INTO ArbitroJogo VALUES('468', '6');
 INSERT INTO ArbitroJogo VALUES('469', '6');
@@ -1618,8 +1627,10 @@ INSERT INTO Remate VALUES ('184', '261', '1', '10', '6');
 INSERT INTO Remate VALUES ('185', '261', '1', '20', '6');
 INSERT INTO Remate VALUES ('186', '261', '1', '30', '6');
 INSERT INTO Remate VALUES ('187', '165', '1', '40', '6');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 6;
 
-INSERT INTO Jogo VALUES ('7', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '4', '1', '527', '17', '3');
+
+INSERT INTO Jogo VALUES ('7', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '4', '1', '527', '17', '3', '0');
 
 INSERT INTO ArbitroJogo VALUES('472', '7');
 INSERT INTO ArbitroJogo VALUES('473', '7');
@@ -1629,8 +1640,10 @@ INSERT INTO ArbitroJogo VALUES('475', '7');
 INSERT INTO EventoJogo VALUES ('200', '10', '6');
 
 INSERT INTO Canto VALUES ('200', '62', '3', '90', '7');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 7;
 
-INSERT INTO Jogo VALUES ('8', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '6', '1', '528', '12', '16');
+
+INSERT INTO Jogo VALUES ('8', strftime("%d/%m/%Y %H:%M", "2019-08-12 20:00"), '6', '1', '528', '12', '16', '0');
 
 INSERT INTO ArbitroJogo VALUES('476', '8');
 INSERT INTO ArbitroJogo VALUES('477', '8');
@@ -1646,6 +1659,8 @@ INSERT INTO Golo VALUES ('220', '213', '10', '8');
 INSERT INTO Golo VALUES ('221', '277', '20', '8');
 INSERT INTO Remate VALUES ('222', '213', '1', '10', '8');
 INSERT INTO Remate VALUES ('223', '277', '1', '20', '8');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 8;
+
 
 -- Estádios
 
@@ -2279,7 +2294,7 @@ INSERT INTO Jornada VALUES ('34', '2019'); */
 --	Jogo(idJogo, data_e_hora, classificacaoEquipaArbitragem, idJornada->Jornada, idDelegado->Delegado, idClubeCasa->Clube, idClubeFora->Clube) 
 --  Famalicao (95 - 110) RioAve (198 - 213)
 
-INSERT INTO Jogo VALUES ('9', strftime("%d/%m/%Y %H:%M", "2019-08-18 20:00"), '7', '2', '522', '6', '12');
+INSERT INTO Jogo VALUES ('9', strftime("%d/%m/%Y %H:%M", "2019-08-18 20:00"), '7', '2', '522', '6', '12', '0');
 
 INSERT INTO ArbitroJogo VALUES('444', '9');
 INSERT INTO ArbitroJogo VALUES('445', '9');
@@ -2293,16 +2308,18 @@ INSERT INTO EventoJogo VALUES ('303', '30', '9');
 INSERT INTO EventoJogo VALUES ('304', '40', '9');
 INSERT INTO EventoJogo VALUES ('305', '50', '9');
 
-INSERT INTO Golo VALUES ('300', '95', '10', '1');
+INSERT INTO Golo VALUES ('300', '95', '10', '9');
 INSERT INTO Remate VALUES ('301', '96', '1', '10', '9');
 INSERT INTO Remate VALUES ('302', '198', '1', '20', '9');
 INSERT INTO Remate VALUES ('303', '199', '1', '30', '9');
 INSERT INTO Cartao VALUES ('304', '100','vermelho', '40', '9');
 INSERT INTO Cartao VALUES ('305', '200','amarelo', '50', '9');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 9;
+
 
 
 -- Clube 9: 150-165; Clube 8: 134-149
-INSERT INTO Jogo VALUES ('10', strftime("%d/%m/%Y %H:%M", "2019-08-18 20:00"), '4', '2', '523', '9', '8');
+INSERT INTO Jogo VALUES ('10', strftime("%d/%m/%Y %H:%M", "2019-08-18 20:00"), '4', '2', '523', '9', '8', '0');
 
 INSERT INTO ArbitroJogo VALUES('448', '3');
 INSERT INTO ArbitroJogo VALUES('449', '3');
@@ -2329,12 +2346,13 @@ INSERT INTO Remate VALUES ('336', '150', '1', '20', '10');
 INSERT INTO Remate VALUES ('337', '150', '1', '20', '10');
 INSERT INTO Cartao VALUES ('338', '155','vermelho', '20', '10');
 INSERT INTO Cartao VALUES ('339', '151','amarelo', '20', '10');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 10;
 
 
 
 
 -- Clube 0: (0-15); 13: (214-229)
-INSERT INTO Jogo VALUES ('11', strftime("%d/%m/%Y %H:%M", "2019-08-18 20:00"), '6', '2', '524', '0', '13');
+INSERT INTO Jogo VALUES ('11', strftime("%d/%m/%Y %H:%M", "2019-08-18 20:00"), '6', '2', '524', '0', '13', '0');
 
 INSERT INTO ArbitroJogo VALUES('468', '11');
 INSERT INTO ArbitroJogo VALUES('469', '11');
@@ -2356,10 +2374,11 @@ INSERT INTO Remate VALUES ('353', '0', '1', '35', '11');
 INSERT INTO Remate VALUES ('354', '0', '1', '45', '11');
 INSERT INTO Cartao VALUES ('355', '1','vermelho', '55', '11');
 INSERT INTO Cartao VALUES ('356', '2','vermelho', '65', '11');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 11;
 
 
 -- FCPorto: 111-122 - VitoriaFC: 278-289
-INSERT INTO Jogo VALUES ('12', strftime("%d/%m/%Y %H:%M", "2019-08-18 20:00"), '6', '2', '525', '7', '17');
+INSERT INTO Jogo VALUES ('12', strftime("%d/%m/%Y %H:%M", "2019-08-18 20:00"), '6', '2', '525', '7', '17', '0');
 
 INSERT INTO ArbitroJogo VALUES('483', '12');
 INSERT INTO ArbitroJogo VALUES('484', '12');
@@ -2396,6 +2415,8 @@ INSERT INTO Remate VALUES ('410', '111', '1', '10', '12');
 INSERT INTO Cartao VALUES ('411', '115','vermelho', '10', '12');
 
 INSERT INTO Cartao VALUES ('412', '278','vermelho', '10', '12');
+UPDATE Jogo SET terminadoPara = '1' WHERE idJogo = 12;
+
 
 
 

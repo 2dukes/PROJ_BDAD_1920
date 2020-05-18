@@ -119,8 +119,8 @@ CREATE TABLE ClassificacaoDoClubeNaEpoca (
     idClassificacao INTEGER NOT NULL,
     golosMarcados INTEGER DEFAULT 0 CHECK (golosMarcados >= 0),
     golosSofridos INTEGER DEFAULT 0 CHECK (golosSofridos >= 0),
-    diferencaGolos INTEGER DEFAULT 0 CHECK (diferencaGolos = (golosMarcados - golosSofridos)),
-    pontos INTEGER DEFAULT 0 CHECK ((pontos >= 0) AND (pontos = (3 * numVitorias + numEmpates))),
+    diferencaGolos INTEGER DEFAULT 0 ,
+    pontos INTEGER DEFAULT 0  ,
     numVitorias DEFAULT 0 CHECK (numVitorias >= 0),
     numDerrotas DEFAULT 0 CHECK (numDerrotas >= 0),
     numEmpates DEFAULT 0 CHECK (numEmpates >= 0),
@@ -186,6 +186,7 @@ CREATE TABLE Jogo (
     idDelegado INTEGER NOT NULL,
     idClubeCasa INTEGER NOT NULL,
     idClubeFora INTEGER NOT NULL,
+    terminadoPara CHAR(1) NOT NULL CHECK (terminadoPara LIKE '0' OR terminadoPara LIKE '1') DEFAULT '0',
 
     CONSTRAINT Jogo_PK PRIMARY KEY (idJogo),
     CONSTRAINT Jogo_FK1 FOREIGN KEY (idJornada) REFERENCES Jornada(idJornada) ON DELETE CASCADE ON UPDATE CASCADE,
