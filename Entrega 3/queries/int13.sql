@@ -2,6 +2,10 @@
 
 -- Tabela de clubes da casa e respetivos golos por jogo 
 
+.mode columns
+.headers on
+.nullvalue NULL
+
 DROP VIEW IF EXISTS equipas_com_jogos_em_casa;
 CREATE VIEW equipas_com_jogos_em_casa AS
     SELECT Jogador.idClube, Golo.idJogo, COUNT(*) AS 'numGolosCasa'

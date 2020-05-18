@@ -1,5 +1,9 @@
 -- Prémio Melhor Marcador (TOP 3)
 
+.mode columns
+.headers on
+.nullvalue NULL
+
 SELECT idJogador, nome, COUNT(*) as numGolos
 FROM Golo
 JOIN Jogador

@@ -1,5 +1,9 @@
 -- menor intervalo de tempo (em dias) entre dois jogos da mesma equipa
 
+.mode columns
+.headers on
+.nullvalue NULL
+
 DROP VIEW IF EXISTS jogos_equipas;
 CREATE VIEW jogos_equipas AS
     SELECT Jogo.idClubeCasa AS 'idClube', Jogo.idJogo, Jogo.data_e_hora FROM Jogo
@@ -11,3 +15,5 @@ FROM jogos_equipas J1
 JOIN jogos_equipas J2
 ON J1.idClube = J2.idClube
 GROUP BY J1.idClube;
+
+-- temos que adicionar outra jornada

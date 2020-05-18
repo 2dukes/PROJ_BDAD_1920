@@ -1,5 +1,9 @@
 -- Média do número de remates na baliza por jogo ao longo da época, para cada clube.
 
+.mode columns
+.headers on
+.nullvalue NULL
+
 drop view if exists num_remates_por_jogo;
 
 create view num_remates_por_jogo as

@@ -1,5 +1,9 @@
 -- Jogadores com uma média de golos por jogo superior a 1 (de sempre)
 
+.mode columns
+.headers on
+.nullvalue NULL
+
 drop view if exists num_golos_por_jogador;
 
 create view num_golos_por_jogador as

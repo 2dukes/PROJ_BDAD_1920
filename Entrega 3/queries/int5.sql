@@ -1,5 +1,9 @@
 -- Prémio melhor árbitro(s) da época 2019
 
+.mode columns
+.headers on
+.nullvalue NULL
+
 drop view if exists classificacoes_arbitros_epoca_2019;
 
 create view classificacoes_arbitros_epoca_2019 as 
@@ -12,7 +16,7 @@ create view classificacoes_arbitros_epoca_2019 as
     where Epoca.anoInicio='2019'
     GROUP BY Arbitro.idPessoa;
 
-SELECT * FROM classificacoes_arbitros_epoca_2019;
+--SELECT * FROM classificacoes_arbitros_epoca_2019;
 
 SELECT *
 FROM classificacoes_arbitros_epoca_2019

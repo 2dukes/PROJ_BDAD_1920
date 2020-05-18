@@ -1,6 +1,8 @@
 -- Top 3 Clubes com o maior número de golos marcados (em caso de empate vê o/os que tiverem menos golos sofridos)
 
--- Golos Sofridos por Equipa
+.mode columns
+.headers on
+.nullvalue NULL
 
 DROP VIEW IF EXISTS jogos_equipas;
 CREATE VIEW jogos_equipas AS

@@ -1,5 +1,9 @@
 -- Árbitros que arbitraram o primeiro jogo do F.C.Porto (idClube = 7) na época de 2019.
 
+.mode columns
+.headers on
+.nullvalue NULL
+
 select Arbitros.idArbitro, Arbitros.nome
 from (
     select ArbitroJogo.idArbitro, Arbitro.nome, Jogo.idJornada as numJornada, 

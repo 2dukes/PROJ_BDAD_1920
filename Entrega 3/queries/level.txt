@@ -1,0 +1,10 @@
+fácil: 4,10,14
+
+Média: 1,5,7,12,17
+
+Difícil:13,16
+
+Muito Difícil:18
+
+ATENÇÃO: precisamos de adicionar mais alguns jogos de outra jornada, para a 7 dar,
+e mudar o output da 7

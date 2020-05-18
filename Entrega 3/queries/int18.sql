@@ -1,6 +1,10 @@
 -- Classificação das equipas (em caso de empate, ver a equipa com maior diferença golos marcados / 
 -- golos sofridos em caso de novo empate ganha equipa com mais golos marcados)
 
+.mode columns
+.headers on
+.nullvalue NULL
+
 DROP VIEW IF EXISTS jogos_equipas;
 CREATE VIEW jogos_equipas AS
     SELECT Jogo.idClubeCasa AS 'idClube', Jogo.idJogo FROM Jogo
