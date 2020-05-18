@@ -1,19 +1,31 @@
--- menor intervalo de tempo (em dias) entre dois jogos da mesma equipa
+-- Jogadores com uma média de golos por jogo superior a 1 (de sempre)
 
 .mode columns
 .headers on
 .nullvalue NULL
 
-DROP VIEW IF EXISTS jogos_equipas;
-CREATE VIEW jogos_equipas AS
-    SELECT Jogo.idClubeCasa AS 'idClube', Jogo.idJogo, Jogo.data_e_hora FROM Jogo
-    UNION
-    SELECT Jogo.idClubeFora AS 'idClube', Jogo.idJogo, Jogo.data_e_hora FROM Jogo; 
+drop view if exists num_golos_por_jogador;
 
-SELECT J1.idClube, J1.data_e_hora, J2.data_e_hora , min(julianday(abs(J1.data_e_hora - J2.data_e_hora))) AS 'Minimo de Tempo Entre Dois Jogos (dias)'
-FROM jogos_equipas J1
-JOIN jogos_equipas J2
-ON J1.idClube = J2.idClube
-GROUP BY J1.idClube;
+create view num_golos_por_jogador as
 
--- temos que adicionar outra jornada
+    select Jogador.idPessoa as id_jogador, Jogador.nome, count(*) as totalGolos
+    from Jogador join Golo on Jogador.idPessoa=Golo.idJogador
+    group by Jogador.idPessoa;
+
+--select * from num_golos_por_jogador;
+
+drop view if exists num_jogos_por_jogador;
+
+create view num_jogos_por_jogador as 
+    select Jogador.idPessoa as id_jogador, Jogador.nome, count(*) as totalJogos
+    from Jogador join EstatisticaJogadorNumJogo on Jogador.idPessoa=EstatisticaJogadorNumJogo.idJogador
+    group by Jogador.idPessoa;
+
+--select * from num_jogos_por_jogador;
+
+select num_golos_por_jogador.id_jogador, num_golos_por_jogador.nome, avg(totalGolos / totalJogos) AS 'Media de Golos'
+from 
+    num_golos_por_jogador left join num_jogos_por_jogador on 
+    num_golos_por_jogador.id_jogador=num_jogos_por_jogador.id_jogador
+group by num_golos_por_jogador.id_jogador
+having avg(totalGolos / totalJogos) > 1.0;
