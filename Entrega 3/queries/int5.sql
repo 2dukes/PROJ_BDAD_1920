@@ -1,27 +1,18 @@
--- Prémio melhor árbitro(s) da época 2019
+-- menor intervalo de tempo (em dias) entre dois jogos da mesma equipa
 
 .mode columns
 .headers on
 .nullvalue NULL
 
-drop view if exists classificacoes_arbitros_epoca_2019;
+DROP VIEW IF EXISTS jogos_equipas;
+CREATE VIEW jogos_equipas AS
+    SELECT Jogo.idClubeCasa AS 'idClube', Jogo.idJogo, Jogo.data_e_hora FROM Jogo
+    UNION
+    SELECT Jogo.idClubeFora AS 'idClube', Jogo.idJogo, Jogo.data_e_hora FROM Jogo; 
 
-create view classificacoes_arbitros_epoca_2019 as 
-    select Arbitro.idPessoa, Arbitro.nome, sum(Jogo.classificacaoEquipaArbitragem) as 'classificacaoArbitro'
-    from ArbitroJogo 
-        join Jogo on ArbitroJogo.idJogo=Jogo.idJogo
-        join Jornada on Jogo.idJornada=Jornada.idJornada
-        join Epoca on Jornada.epoca=Epoca.anoInicio
-        join Arbitro on ArbitroJogo.idArbitro=Arbitro.idPessoa
-    where Epoca.anoInicio='2019'
-    GROUP BY Arbitro.idPessoa;
-
---SELECT * FROM classificacoes_arbitros_epoca_2019;
-
-SELECT *
-FROM classificacoes_arbitros_epoca_2019
-WHERE classificacaoArbitro = (
-    select max(classificacaoArbitro) as MaxClassificacaoArbitro
-    from classificacoes_arbitros_epoca_2019
-);
-
+SELECT J1.idClube, J1.data_e_hora as 'Data e Hora 1', J2.data_e_hora as 'Data e Hora 2', min(julianday(abs(J1.data_e_hora - J2.data_e_hora))) AS 'Minimo de Tempo Entre Dois Jogos (dias)'
+FROM jogos_equipas J1
+JOIN jogos_equipas J2
+ON J1.idClube = J2.idClube
+where J1.data_e_hora <> J2.data_e_hora
+GROUP BY J1.idClube;
