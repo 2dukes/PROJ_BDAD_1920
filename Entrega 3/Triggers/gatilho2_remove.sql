@@ -1,0 +1,1 @@
+DROP TRIGGER IF EXISTS verifica_jogo_repetido;
