@@ -11,10 +11,12 @@ CREATE VIEW jogos_equipas AS
     UNION 
     SELECT Jogo.idClubeFora AS 'idClube', Jogo.idJogo FROM Jogo; 
 
+-- SELECT * FROM jogos_equipas;
+
 DROP VIEW IF EXISTS golos_sofridos_clube;
 CREATE VIEW golos_sofridos_clube AS
     -- SELECT J1.idJogo, J1.idClube, J2.idClube, coalesce(golos_clubes.NumGolos, 0) AS 'numGolosSofridos'
-    SELECT J1.idJogo, J1.idClube, coalesce(golos_clubes.NumGolos, 0) AS 'numGolosSofridos'
+    SELECT J1.idJogo, J1.idClube, coalesce(sum(golos_clubes.NumGolos), 0) AS 'numGolosSofridos'
     FROM jogos_equipas J1 
     JOIN jogos_equipas J2
     ON J2.idJogo in (SELECT jogos_equipas.idJogo FROM jogos_equipas WHERE J1.idJogo = J2.idJogo AND J2.idClube <> J1.idClube)
@@ -28,7 +30,10 @@ CREATE VIEW golos_sofridos_clube AS
             ON Golo.idJogo = Jogo.idJogo
             GROUP BY Jogador.idClube
         ) golos_clubes
-    ON J2.idClube = golos_clubes.idClube AND J1.idJogo = golos_clubes.idJogo;
+    ON J2.idClube = golos_clubes.idClube AND J1.idJogo = golos_clubes.idJogo
+    GROUP BY J1.idClube;
+
+-- SELECT * FROM golos_sofridos_clube;
 
 DROP VIEW IF EXISTS golos_marcados_sofridos_clube;
 CREATE VIEW golos_marcados_sofridos_clube AS
@@ -140,7 +145,7 @@ CREATE VIEW num_pontos AS
 
 -- Classificação!
 
-SELECT DISTINCT num_pontos.idClube, num_pontos.nome, PontosVitorias + PontosEmpates AS 'Pontos'
+SELECT num_pontos.idClube, num_pontos.nome, PontosVitorias + PontosEmpates AS 'Pontos'
 FROM num_pontos
 JOIN golos_marcados_sofridos_clube GMSC
 ON num_pontos.idClube = GMSC.idClube
