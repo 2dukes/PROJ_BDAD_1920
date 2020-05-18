@@ -16,7 +16,7 @@ CREATE TRIGGER pontuacao_arbitro
             ON ArbitroJogo.idJogo = Jogo.idJogo
             WHERE idArbitro = NEW.idArbitro)
         THEN
-            RAISE(ABORT, 'O Arbitro esta a ser atribuido a outro jogo de uma mesma jornada!') -- Trabalho da FK... Defensive programming :)
+            RAISE(ABORT, 'O Arbitro esta a ser atribuido a outro jogo de uma mesma jornada!') 
         END;
         
         UPDATE Arbitro SET classificacao = classificacao + (SELECT classificacaoEquipaArbitragem

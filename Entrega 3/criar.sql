@@ -212,8 +212,8 @@ CREATE TABLE ArbitroJogo (
     idArbitro INTEGER NOT NULL,
     idJogo INTEGER NOT NULL,
 
-    CONSTRAINT ArbitroJogo_PK PRIMARY KEY (idArbitro),
-    CONSTRAINT ArbitroJogoJogo_FK_Pessoa FOREIGN KEY (idArbitro) REFERENCES Pessoa(idPessoa) ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT ArbitroJogo_PK PRIMARY KEY (idArbitro, idJogo),
+    CONSTRAINT ArbitroJogoJogo_FK_Pessoa FOREIGN KEY (idArbitro) REFERENCES Pessoa(idPessoa) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT ArbitroJogoJogo_FK_Jogo FOREIGN KEY (idJogo) REFERENCES Jogo(idJogo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
