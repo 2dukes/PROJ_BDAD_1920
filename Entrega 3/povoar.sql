@@ -2250,10 +2250,6 @@ INSERT INTO EstatisticaJogadorEpoca(idEstatisticaJogadorEpoca, epoca, idJogador)
 
 
 
-
-
-
-
 /* INSERT INTO Jornada VALUES ('2', '2019');
 INSERT INTO Jornada VALUES ('3', '2019');
 INSERT INTO Jornada VALUES ('4', '2019');
@@ -2541,31 +2537,3 @@ INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALU
 INSERT INTO EstatisticaJogadorNumJogo(idJogador, idJogo, numMinutosJogados) VALUES(287, 12, 90);
 
 
-
-
-
-
-
-/*
-
-INSERT INTO Club VALUES ('0', 'Belenenses SAD', '1919', '0'); 0 - 15
-INSERT INTO Club VALUES ('1', 'Boavista FC', '1919', '1'); 16 - 31
-INSERT INTO Club VALUES ('2', 'CD Santa Clara', '1919', '2'); 32 - 47
-INSERT INTO Club VALUES ('3', 'CD Tondela', '1919', '3'); 48 - 62
-INSERT INTO Club VALUES ('4', 'CS Maritimo', '1919', '4'); 63 - 78
-INSERT INTO Club VALUES ('5', 'Desportivo das Aves', '1919', '5'); 79 - 94
-INSERT INTO Club VALUES ('6', 'FC Famalicão', '1919', '6'); 95 - 110
-INSERT INTO Club VALUES ('7', 'FC Porto', '1893', '7'); 111 - 133
-INSERT INTO Club VALUES ('8', 'Gil Vicente FC', '1919', '6'); 134 - 149
-INSERT INTO Club VALUES ('9', 'Moreirense FC', '1919', '9'); 150 - 165
-INSERT INTO Club VALUES ('10', 'Paços de Ferreira', '1919', '10'); 166 - 181 
-INSERT INTO Club VALUES ('11', 'Portimonense SC', '1919', '11'); 182 - 197
-INSERT INTO Club VALUES ('12', 'Rio Ave', '1919', '12'); 198 - 213
-INSERT INTO Club VALUES ('13', 'SL Benfica', '1919', '13'); 214 - 229
-INSERT INTO Club VALUES ('14', 'Sporting CP', '1919', '14'); 230 - 245
-INSERT INTO Club VALUES ('15', 'Sporting de Braga', '1919', '15'); 246 - 261
-INSERT INTO Club VALUES ('16', 'Vitória de Guimarães', '1919', '16'); 262 - 277
-INSERT INTO Club VALUES ('17', 'Vitória de Setúbal', '1919', '17'); 278 - 293
-
-
-*/
