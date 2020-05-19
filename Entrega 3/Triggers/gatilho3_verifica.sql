@@ -1,3 +1,10 @@
+.mode columns
+.headers on
+.nullvalue NULL
+
+PRAGMA foreign_keys=ON;
+
+
 .print 'ADIÇÃO DE EVENTOS DE JOGO...'
 .print ''
 .print ''

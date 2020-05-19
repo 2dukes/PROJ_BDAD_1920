@@ -1,3 +1,10 @@
+.mode columns
+.headers on
+.nullvalue NULL
+
+PRAGMA foreign_keys=ON;
+
+
 DROP TRIGGER IF EXISTS classificacao_equipas;
 DROP TRIGGER IF EXISTS Estatisticas_Clube_Golo;
 DROP TRIGGER IF EXISTS Estatisticas_Clube_Amarelo;

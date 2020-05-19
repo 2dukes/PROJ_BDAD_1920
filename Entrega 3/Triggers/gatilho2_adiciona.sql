@@ -1,4 +1,12 @@
 -- Verifica se equipa da casa não joga duas vezes no mesmo local com a mesma equipa (verifica se equipa não se defronta mais que 2x - ERRADO)
+
+.mode columns
+.headers on
+.nullvalue NULL
+
+PRAGMA foreign_keys=ON;
+
+
 CREATE TRIGGER verifica_jogo_repetido
     AFTER INSERT ON Jogo
     FOR EACH ROW

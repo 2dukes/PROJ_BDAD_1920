@@ -1,3 +1,10 @@
+.mode columns
+.headers on
+.nullvalue NULL
+
+PRAGMA foreign_keys=ON;
+
+
 BEGIN transaction;
 
 SELECT * FROM Jogo;

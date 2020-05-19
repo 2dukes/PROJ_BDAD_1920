@@ -1,3 +1,10 @@
+.mode columns
+.headers on
+.nullvalue NULL
+
+PRAGMA foreign_keys=ON;
+
+
 -- Triggers necessários à construção da classificação das Equipas!
 CREATE TRIGGER Estatisticas_Clube_Golo
     AFTER INSERT ON Golo

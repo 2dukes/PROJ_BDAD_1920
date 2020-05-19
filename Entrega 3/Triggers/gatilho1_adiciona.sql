@@ -1,3 +1,10 @@
+.mode columns
+.headers on
+.nullvalue NULL
+
+PRAGMA foreign_keys=ON;
+
+
 CREATE TRIGGER pontuacao_arbitro 
     AFTER INSERT ON ArbitroJogo
     FOR EACH ROW
