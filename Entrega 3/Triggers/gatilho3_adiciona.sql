@@ -1,3 +1,4 @@
+-- Triggers necessários à construção da classificação das Equipas!
 CREATE TRIGGER Estatisticas_Clube_Golo
     AFTER INSERT ON Golo
     FOR EACH ROW
@@ -128,3 +129,127 @@ CREATE TRIGGER Estatisticas_Clube_Assistencia
                         WHERE Jogador.idPessoa = NEW.idJogador)
             AND idJogo = NEW.idJogo;
     END; 
+
+CREATE TRIGGER classificacao_equipas
+    AFTER INSERT ON Golo
+    FOR EACH ROW
+    BEGIN
+        -- Atualizar Golos Marcados
+        UPDATE ClassificacaoDoClubeNaEpoca
+        SET golosMarcados = golosMarcados + 1 
+        WHERE idClassificacao = (SELECT idClassificacao
+                                FROM Jogador
+                                JOIN Clube
+                                ON Jogador.idClube = Clube.idClube
+                                WHERE Jogador.idPessoa = NEW.idJogador);
+        
+        -- Atualizar Golos Sofridos
+        UPDATE ClassificacaoDoClubeNaEpoca
+        SET golosSofridos = golosSofridos + 1
+        WHERE idClassificacao = (CASE
+                                    WHEN (SELECT idClubeCasa FROM Jogo WHERE idClubeCasa = (SELECT idClube FROM Jogador WHERE Jogador.idPessoa = NEW.idJogador)) 
+                                        THEN (SELECT idClassificacao 
+                                             FROM Jogo
+                                             JOIN Clube 
+                                             ON Jogo.idClubeFora = Clube.idClube
+                                             WHERE Jogo.idJogo = NEW.idJogo) 
+                                    WHEN (SELECT idClubeFora FROM Jogo WHERE idClubeFora = (SELECT idClube FROM Jogador WHERE Jogador.idPessoa = NEW.idJogador)) 
+                                        THEN (SELECT idClassificacao 
+                                             FROM Jogo
+                                             JOIN Clube 
+                                             ON Jogo.idClubeCasa = Clube.idClube
+                                             WHERE Jogo.idJogo = NEW.idJogo)
+                                END); 
+
+        -- Atualizar Diferença de Golos
+        UPDATE ClassificacaoDoClubeNaEpoca
+        SET diferencaGolos = golosMarcados - golosSofridos;
+    END;
+
+CREATE TRIGGER jogo_terminado
+    AFTER UPDATE ON Jogo
+    FOR EACH ROW
+    WHEN NEW.terminadoPara = '1'
+    BEGIN
+        -- Atualizar numVitorias | numDerrotas | numEmpates -> Equipa da Casa
+        UPDATE ClassificacaoDoClubeNaEpoca
+        SET numVitorias = (CASE
+                            WHEN (SELECT numGolos 
+                                FROM EstatisticaClubeJogo
+                                WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeCasa) > (SELECT numGolos
+                                                                                            FROM EstatisticaClubeJogo
+                                                                                            WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeFora)
+                                THEN
+                                    numVitorias + 1
+                                ELSE 
+                                    numVitorias
+                            END),
+        numDerrotas = (CASE
+                            WHEN (SELECT numGolos 
+                                FROM EstatisticaClubeJogo
+                                WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeCasa) < (SELECT numGolos
+                                                                                            FROM EstatisticaClubeJogo
+                                                                                            WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeFora)
+                                THEN
+                                    numDerrotas + 1
+                                ELSE
+                                    numDerrotas
+                            END),
+        numEmpates = (CASE
+                            WHEN (SELECT numGolos 
+                                FROM EstatisticaClubeJogo
+                                WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeCasa) = (SELECT numGolos
+                                                                                            FROM EstatisticaClubeJogo
+                                                                                            WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeFora)
+                                THEN
+                                    numEmpates + 1
+                                ELSE
+                                    numEmpates
+                            END)
+        WHERE idClassificacao = (SELECT idClassificacao 
+                                FROM Clube
+                                WHERE Clube.idClube = NEW.idClubeCasa);
+
+        -- Atualizar numVitorias | numDerrotas | numEmpates -> Equipa de Fora
+        UPDATE ClassificacaoDoClubeNaEpoca
+        SET numVitorias = (CASE
+                            WHEN (SELECT numGolos 
+                                FROM EstatisticaClubeJogo
+                                WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeCasa) < (SELECT numGolos
+                                                                                            FROM EstatisticaClubeJogo
+                                                                                            WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeFora)
+                                THEN
+                                    numVitorias + 1
+                                ELSE
+                                    numVitorias
+                            END),
+        numDerrotas = (CASE
+                            WHEN (SELECT numGolos 
+                                FROM EstatisticaClubeJogo
+                                WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeCasa) > (SELECT numGolos
+                                                                                            FROM EstatisticaClubeJogo
+                                                                                            WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeFora)
+                                THEN
+                                    numDerrotas + 1
+                                ELSE
+                                    numDerrotas
+                            END),
+        numEmpates = (CASE
+                            WHEN (SELECT numGolos 
+                                FROM EstatisticaClubeJogo
+                                WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeCasa) = (SELECT numGolos
+                                                                                            FROM EstatisticaClubeJogo
+                                                                                            WHERE idJogo = NEW.idJogo AND idClube = NEW.idClubeFora)
+                                THEN
+                                    numEmpates + 1
+                                ELSE
+                                    numEmpates
+                            END)
+        WHERE idClassificacao = (SELECT idClassificacao 
+                                FROM Clube
+                                WHERE Clube.idClube = NEW.idClubeFora);
+
+        UPDATE ClassificacaoDoClubeNaEpoca
+        SET pontos = numVitorias * 3 + numEmpates;
+        
+    END;
