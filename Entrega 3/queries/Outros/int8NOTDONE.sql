@@ -1,2 +1,0 @@
--- jogadores que na época de 2019 ficaram impedidos de jogar, por causa do número de cartões amarelos
--- ou vermelhos, e o número de vezes que tal aconteceu.

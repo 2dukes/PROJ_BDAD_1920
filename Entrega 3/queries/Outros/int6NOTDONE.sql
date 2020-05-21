@@ -1,1 +1,0 @@
--- Evento do jogo que mais vezes aconteceu ao longo da época 2019

@@ -1,1 +1,0 @@
--- Clube com o maior número de vitórias na época de 2019

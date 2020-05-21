@@ -1,1 +1,0 @@
--- Jogos em que o número de remates é igual ao número de golos
